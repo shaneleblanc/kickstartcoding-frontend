@@ -1,0 +1,138 @@
+<!doctype html>
+
+<!--
+    For this activity, you'll need to write both HTML and CSS from scratch to
+    recreate the mockup (see images/futurama_mockup.png).
+
+    Think about grouping together certain elements into "<div>" elements,
+    giving those div elements classes of names you invent (like <div
+    class="MainContent"> ....</div>) and then giving those classes you created
+    the right CSS to lay everything out and style it as you see in the image.
+
+    Time to put together all the CSS and HTML you've learned thus far!
+-->
+<html>
+    <meta charset="utf-8" />
+    <head>
+        <title>Futurama Speed Challenge</title>
+
+        <style>
+            body {
+                background: url('http://i.imgur.com/PvU6LxU.jpg') no-repeat top center fixed;
+                -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+            }
+
+            img {
+                width: 300px;
+            }
+            .grid-container1 {
+              display: grid;
+              grid-template-columns: 5% 40% 40%;
+              grid-template-rows: auto;
+              justify-content: center;
+              align-items: center;
+              grid-row-gap: 30px;
+            }
+            .spacer-row1 {
+              grid-column: 1;
+            }
+            .spacer-row2 {
+              grid-column: 3;
+            }
+            .main-row {
+              width: 825px;
+            grid-column: 2;
+            grid-row: auto;
+            background-color: #FAFAFA;
+            box-shadow: 5px 5px 5px 5px #121212;
+            }
+            .inside-grid {
+              display: grid;
+              grid-template-columns: 300px, auto;
+              grid-template-rows: auto;
+              grid-gap: 15px;
+            }
+            .inside-pic {
+              grid-column: 1;
+              grid-row: 1;
+              width: 300px;
+              margin: 20px 20px;
+
+            }
+            .inside-text {
+              grid-column: 2;
+              font-family: Sans-Serif;
+              grid-row: 1;
+            }
+
+            /* CSS goes here */
+        </style>
+
+    </head>
+    <body>
+<div class="grid-container1">
+  <div class="spacer-row1">&nbsp;</div>
+  <div class="main-row">
+      <div class="inside-grid">
+        <div class="inside-pic">
+        <img src="https://i.imgur.com/4j5by0o.png" />
+      </div>
+      <div class="inside-text">
+        <h1>They work here in the Slurm factory.</h1>
+        <p>But existing is basically all I do!  Moving along… Ah, yes! John
+        Quincy Adding Machine. He struck a chord with the voters when he
+        pledged not to go on a killing spree.</p>
+
+        <p>Does anybody else feel jealous and worried? <strong> You
+        are the last hope of the universe.</strong> <em> In your time, yes, but
+        nowadays shut up!</em> Besides, these are adult stemcells, harvested
+        from perfectly healthy adults whom I killed for their stemcells.</p>
+</div>
+</div>
+</div>
+<div class="main-row">
+  <div class="inside-grid">
+    <div class="inside-pic">
+        <img src="https://i.imgur.com/oa7l7k6.jpg" />
+      </div>
+      <div class="inside-text">
+        <h1>A true inspiration for the children.</h1>
+
+        <p>Noooooo! Now what? Morbo can't understand his teleprompter because
+        he forgot how you say that letter that's shaped like a man wearing a
+        hat. We'll go deliver this crate like professionals, and then we'll go
+        home.</p>
+
+        <ol>
+            <li>I didn't ask for a completely reasonable excuse! I asked you to
+            get busy!</li>
+            <li>I just want to talk.  It has nothing to do with mating. Fry,
+            that doesn't make sense.</li>
+        </ol>
+</div>
+</div>
+</div>
+<div class="main-row">
+  <div class="inside-grid">
+    <div class="inside-pic"></div>
+    <div class="inside-text">
+        <h1>I guess if you want it, you have to do it yourself.</h1>
+
+        <p>I'm a thing. Eeeee! Now say "nuclear wessels"! The alien mothership
+        is in orbit here. If we can hit that bullseye, the rest of the dominoes
+        will fall like a house of cards.  Checkmate.</p>
+
+        <p>I don't want to be rescued. I was having the most wonderful dream.
+        Except you were there, and you were there, and you were there! Yeah,
+        lots of people did. You've killed me! Oh, you've killed me!</p>
+      </div>
+    </div>
+      </div>
+      </div>
+        <div class="spacer-row2">&nbsp;</div>
+      </div>
+    </body>
+</html>

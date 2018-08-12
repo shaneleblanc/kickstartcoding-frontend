@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bare-css@2.0.3/css/bare.min.css" />
+    </head>
+    <body>
+        <nav>
+            <section>
+                <h1>To-do List</h1>
+                <p>            <input placeholder="Your name" id="user-name" />
+                            <button onClick="save()">Save</button>
+                            <button onClick="load()">Load</button>
+                            <span id="status"></span>
+                          </p>
+            </section>
+        </nav>
+        <section>
+            <section id="todo-list">
+            </section>
+            <input placeholder="Enter item" id="new-item" />
+            <button onCLick="addItemToList()">Add to-do item</button> <br>
+        </section>
+
+        <script>
+            /*
+                Challenge #1:
+                Do the first thing you do in JavaScript, e.g. console.log.
+                Double check in Chrome you are seeing the change appear.
+            */
+           console.log("Hi script")
+
+            let todoList = [
+                "First Item",
+                "Second Item",
+            ];
+
+            /*
+                Challenge #2:
+                Examine the following render() function. Can you explain to
+                the person next to you what it is doing?
+
+                Add a console.log and ensure it is getting invoked. If you
+                discover that is not getting invoked, add the code necessary to
+                invoke it.
+            */
+
+            function render() {
+              console.log('render invoked');
+                let div = document.querySelector('#todo-list');
+                div.innerHTML = '';
+                for (let text of todoList) {
+                    let item = document.createElement('h3');
+                    let deleteButton = document.createElement('button');
+                    let doneButton = document.createElement('button');
+                    deleteButton.textContent = "Delete";
+                    doneButton.textContent = "Done";
+                    doneButton.onclick = () => {
+                      console.log(`they said they finished ${text}`);
+                      let index = todoList.indexOf(text);
+                      todoList[index] = "Done!";
+                      render();
+                    }
+                    deleteButton.onclick = () => {
+                      console.log(`tryna delete ${text}`);
+                      let index = todoList.indexOf(text);
+                      todoList.splice(index, 1);
+                      render();
+                    }
+                    item.textContent = text;
+                    item.appendChild(deleteButton);
+                    item.appendChild(doneButton);
+                    div.appendChild(item);
+                }
+            }
+
+
+
+            function addItemToList() {
+                /*
+                    Challenge #3: "Read" from DOM
+
+                    Access the input element from the DOM so we can access the
+                    value that the user typed in. Console.log out the value
+                    they typed in.
+
+                    HINT #1: Don't forget what you always do with JavaScript
+                    events to confirm they are working! There was actually a
+                    bug added to this one...
+
+                    HINT #2: Once you get the right element, use "element.value"
+                    to get the value. Always use console.log at each step of
+                    the process.
+                */
+                  let box = document.querySelector('#new-item');
+                  console.log(box.value);
+
+                /*
+                    Challenge #4: "Create" to DOM
+                    Add a new element to the DOM for this new to-do item using
+                    any methodology you've learned so far.
+                */
+               todoList.push(box.value);
+               box.textContent = '';
+               render();
+            }
+
+            /*
+                Challenge #5: "Update" to DOM
+                Add a "DONE" button to each item. This should replace the text
+                of that item with the word "Done".
+
+                HINT: This will require adding code in multiple spots.
+            */
+
+            /*
+                Challenge #6: "Delete" to DOM
+                Every item should have a delete button. Implement it in any way
+                you can.
+
+                HINT: This too will require adding code in multiple spots.
+            */
+
+            /*
+                Advanced Bonus Challenge: localStorage
+                Browsers can store data to "localStorage" so that the changes
+                you make can be restored when the browser is reloaded. Modify
+                this to-do list to store the list to localStorage, and load the
+                list when you visit again.
+            */
+            save = () => {
+              username = document.querySelector('#user-name').value;
+              localStorage.setItem(username, JSON.stringify(todoList));
+              document.querySelector('#status').textContent = `List saved to: ${username}`;
+            }
+            load = () => {
+              username = document.querySelector('#user-name').value;
+              todoList = JSON.parse(localStorage.getItem(username));
+              document.querySelector('#status').textContent = `List loaded from: ${username}`;
+              render();
+            }
+            /*
+                Another Bonus Challenge: Using backticks
+                Can you implement an onClick event using the template literal
+                backtick syntax?
+
+                (partial solution provided, since it conflicts with the rest)
+            */
+            render();
+        </script>
+    </body>
+</html>

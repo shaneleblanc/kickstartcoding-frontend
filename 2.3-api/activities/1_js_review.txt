@@ -1,0 +1,42 @@
+Instructions: With members of your group, see if you can define in your
+own words what each of these terms or JavaScript syntax examples mean.
+If your entire group gets stuck with one of these terms, research it,
+
+
+### JavaScript terminology
+
+JavaScript
+debugging console
+script tag
+DOM
+DOM manipulation
+DOM tree
+
+
+### JavaScript types and functions
+
+object
+array
+strings
+document.querySelector
+document.querySelectorAll
+document.createElement
+element.innerHTML
+element.textContent
+element.value
+element.onclick
+element.appendChild
+window.fetch
+
+
+### JavaScript syntax
+
+===
+let - block scoped variable
+const - static variable
+if - used for conditional expressions
+&& - "and" comparison operator, returns true if both items/sides are true
+|| - "or" comparison operator, returns true if either item/side is true
+function - a procedure, block of code or set of statements that can optionally take arguments and/or return a value
+for...of - loops over iterable objects, such as arrays, strings, etc.
+() => {} arrow function

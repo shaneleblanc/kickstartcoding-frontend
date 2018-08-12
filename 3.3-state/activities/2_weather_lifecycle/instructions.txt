@@ -1,0 +1,67 @@
+Weather Dashboard Part 2
+
+Getting started:
+Copy the node_modules directory from a previous activity into this
+directory, and then get started by running:
+
+    npm run start
+
+----------------------
+Challenge #1: console.log on life-cycle method
+
+1. Create a new method called "componentDidMount".
+
+2. Write into it a "console.log" that ensures that it is being run
+initially.
+
+
+----------------------
+Challenge #2: fetch on first load
+
+Make it so that the componentDidMount causes a fetch to load the data
+upon first viewing the page.
+
+
+
+----------------------
+Challenge #3: Loading spinner
+
+The CSS for a loading spinner is already provided for you. Your task is
+to conditionally display the spinner when you are making a load request.
+The code to conditionally display the spinner is as such:
+
+
+
+----------------------
+Challenge #4: localStorage
+
+"localStorage" is a form of client-side persistence. You can use this to
+make the page "remember" the last thing you typed in. It has limited use
+in the real-world, as it is on a per-browser, per-computer basis, but
+it is good to know how to use.
+
+Research and use localStorage to have the page save what you typed, and
+then restore it even if you hit "refresh", for a more useful dashboard
+behavior.
+
+
+
+----------------------
+Bonus Challenge: Advanced UI for Searching
+
+Instead of always displaying the refresh/search button, add a new button
+near the location header that "turns on" the ability to edit it.  Try
+out the solution with "npm run start" within the
+solutions/2_weather_lifecycle/ and observe the behavior. Now, try
+implementing it yourself, with a combination of JS & CSS:
+
+1. It should only appear when you hover over the location (Hint: can be
+done purely with CSS)
+
+2. It should have a pencil icon inside (Hint: look up pencil emojis)
+
+3. When clicked, it should "toggle" the "edit-ability" of the title.
+This, in practice, means replacing the text with an input that can be
+changed. When "confirmed", it should then search for the new input and
+update the data in the weather dashboard.
+

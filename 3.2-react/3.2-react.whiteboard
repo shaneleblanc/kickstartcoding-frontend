@@ -1,0 +1,176 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 3.2
+
+[slide]
+title=React
+
+
+[slide]
+title=React Recap
+markdown : '''
+* Node.js
+* NPM
+* Webpack
+* JSX
+* Babel
+* React
+* create-react-app
+'''
+
+
+
+[slide]
+title=React Recap
+markdown : '''
+* **Node.js** - JavaScript in the terminal. Used for building servers, and for
+  building React front-ends.
+* **NPM** - Tool for downloading packages
+* **Webpack** - Tool that combines JavaScript, CSS, images, and other assets in
+  preparation for deploying to production
+* **JSX** - JavaScript variant that enables embedding and templating HTML in
+  your JS
+* **Babel** - Tool written in Node.js to convert the various JavaScript variants
+  into real, legacy JavaScript that can be run on even old browsers
+* **React** - The most popular front-end framework, uses JSX to template
+  ("interpolate"), and has an opinionated philosophy of separating state and
+  components and speeding up rendering with a technique known as Virtual DOM
+* **create-react-app** - Generates a new react project. Takes a bazillion years.
+'''
+
+[slide]
+title=Questions?
+
+[slide]
+title=DEMO: HTML to React
+editor : '''
+    ./demos/html-to-react/*.js
+    ./demos/html-to-react/*.html
+    ./demos/html-to-react/*.css
+'''
+browser=./demos/html-to-react/legacyhtml.html
+
+
+[slide]
+title=ACTIVITY 1 - reactify got
+editor=./activities/1_reactify_got/instructions.txt
+
+[slide]
+title=SOLUTION 1 - reactify got
+editor=./solutions/1_reactify_got/src/App.js
+
+
+[slide]
+title=Principles of React 1
+markdown : '''
+1. State
+2. Componentization
+3. Unidirectional data flow
+4. Virtual DOM
+'''
+
+
+[slide]
+title=Principles of React 1
+markdown : '''
+1. **State**
+2. Componentization
+3. **Unidirectional data flow**
+4. Virtual DOM
+'''
+
+[slide]
+title=Unidirectional Dataflow
+
+[slide]
+title=Unidirectional Dataflow
+markdown : '''
+![notaword](file://./images/madeupwords.gif)
+'''
+
+
+[slide]
+title=Unidirectional Dataflow
+markdown : '''
+![diagram](file://./images/unidirectionaldataflow.png)
+'''
+
+
+[slide]
+title=State
+markdown : '''
+### KEY TERMS
+* **unidrectional dataflow** - The fancy word for the idea that a
+  React application has a state that is modified which causes the app
+  to be re-rendered
+* **state** - an object where we store the current status of the
+  application. The idea is to keep everything that can change in "one
+  place" to make it easier to reason and debug applications
+* `state = {...};` - How we set the default or initial state
+* **this.state** - How we read from state
+* **this.setState** - How we modify state
+'''
+
+
+[slide]
+title=DEMO: HTML to React
+editor : '''
+    ./demos/html-to-react/*.js
+    ./demos/html-to-react/*.html
+    ./demos/html-to-react/*.css
+'''
+markdown : '''
+* this.state - read from state to display
+* this.setState - update state & rerender
+
+![diagram](file://./images/unidirectionaldataflow.png)
+'''
+
+[slide]
+title=Questions?
+
+[slide]
+title=Useful tools
+editor = guides/react_tools.md
+browser = https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
+[slide]
+title=ACTIVITY 2 - got state
+editor=./activities/2_got_state/instructions.txt
+
+[slide]
+title=SOLUTION 2 - got state
+editor=./solutions/2_got_state/src/App.js
+
+[slide]
+layout=grid
+title=DEMO: the form problem
+editor = ./demos/forms/src/App.js
+terminal = ./demos/forms/
+browser = http://localhost:3000/
+
+
+[slide]
+title=ACTIVITY 3 - forms
+editor=./activities/3_career_forms/instructions.txt
+
+[slide]
+title=SOLUTION 3 - forms
+editor=./solutions/3_career_forms/src/App.js
+
+[slide]
+title=API + State
+
+[slide]
+title=ACTIVITY 4 - fetch state
+editor=./activities/4_fetch_state/instructions.txt
+
+[slide]
+title=SOLUTION 4 - fetch state
+editor=./solutions/4_fetch_state/src/App.js
+
+[slide]
+title=Questions?

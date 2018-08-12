@@ -1,0 +1,73 @@
+This activity is to ensure you have Node installed, set up, and
+understand how to create and run JavaScript files using Node.js
+
+
+------------------------------------
+Challenge 1
+Ensure you have node installed by running the following command:
+
+    node --version
+
+If you get "command not found", you can install it with:
+
+    Ubuntu Linux:
+        sudo apt-get install nodejs
+    macOS:
+        brew install node
+
+NOW, make sure you can do some basic math with node. Run:
+
+    node
+
+to enter an interactive prompt. Type
+
+    console.log("Hello world!")           <hit enter>
+    3 + 5                                 <hit enter>
+
+to see JavaScript working!
+
+IMPORTANT: Use Ctrl+D to exit. Whenever you see the "> " that means you
+are in a node prompt, NOT a Bash prompt. Just like the Python ">>> "
+prompt, the only use of this is for immediately running code snippets,
+or use like a calculator. It is not useful for typical development.
+
+
+------------------------------------
+Challenge 2
+
+With your text editor, save a new file called "helloworld.js" in some
+directory. Give the file a console.log saying "Hello Node World!".  With
+a terminal, go to that directory, and run it using:
+
+    node helloworld.js
+
+
+------------------------------------
+Challenge 3
+
+Node.js has a slightly different flavor of JavaScript than the browser.
+It does NOT have access to "window" or "document" (because there is no
+DOM). It DOES have access to a global variable called "process", along
+with a function called "require". This variable has various information
+about the operating system, the file being executed, along with a lot of
+not very useful stuff. By using console.log(process), can you
+console.log out in your helloworld.js the following information?
+
+1. The version of node that is running.
+2. The name that node calls your operating system (hint: look for "platform")
+3. An array containing the command-line arguments used with node.
+
+HINT: For Linux, should be something like:
+['/usr/bin/node', '/home/your_username/projects/helloworld.js']
+For macOS, it should be similar, except the /usr/bin/node will probably
+be replaced with a longer path set by homebrew (will differ depending on
+version), and /home/ will be /Users/.
+
+
+
+------------------------------------
+Bonus Challenge:
+
+Write code that loops through the environmental variables, printing the
+name and value of each one.
+

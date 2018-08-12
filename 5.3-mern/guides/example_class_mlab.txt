@@ -1,0 +1,9 @@
+This is a free MLab account... its free for you to play around! But
+don't abuse it, or it might get shut down :p
+
+From Bash:
+mongo ds219432.mlab.com:19432/kcsandbox -u kcuser -p mongoerrday1
+
+
+Using as a URL: mongodb://kcuser:mongoerrday1@ds219432.mlab.com:19432/kcsandbox
+DB name: kcsandbox

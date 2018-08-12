@@ -1,0 +1,23 @@
+Discuss with your group: What are pros of doing each of these as a
+Single Page App vs a Multi Page App?
+
+While some might have clear winners, most can be done as either.
+
+* Real-time chat application
+SPA
+* Real-estate listing site
+MPA
+* Online card game
+SPA
+* Blog about coding courses
+MPAS
+* Product management software
+Either
+* Online office suite, like Google Docs
+SPA
+* Micro-blog service, like Twitten
+MPA
+* Collaborative map annotation software
+SPA
+* MMORPG
+SPA

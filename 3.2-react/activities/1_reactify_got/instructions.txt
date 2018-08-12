@@ -1,0 +1,92 @@
+Game of Thrones Trivia
+
+For this challenge, you will be transforming a plain HTML page with a CSS
+file and some onClick events into a react powered app.
+
+The plain HTML page is in the "legacy/" directory. Go ahead and open it
+to see how it should work.
+
+
+----------------------
+Challenge #1: Getting started
+
+If you don't have a React app already created somewhere, or don't mind
+waiting as you start fresh, then create one now:
+
+    create-react-app reactify-got
+
+Otherwise, just copy the node_modules directory from your existing react
+app into this directory, and go from here. Get use to this process since
+you will be doing it often in this class and classes to come!
+
+Once ready, use the following to get your react server running:
+
+    npm run start
+
+Then, open guides/react_tasks.md for tips on how to do each of these
+challenges.
+
+Finally, try changing src/App.js. Change some wording to ensure your
+changes re getting picked up.
+
+
+----------------------
+Challenge #2: Transfer the HTML
+
+Your second challenge is transferring the HTML. This can be done in a
+big ol' copy & paste.
+
+If things go poorly, refer to the guide for some gotchas.
+
+
+
+----------------------
+Challenge #3: Transfer the CSS & background image
+
+Copy over the CSS and the background image, either modifying App.css or
+creating a new CSS file and then importing it (up to you).
+
+Note: You may have to tweak the CSS to make sure it points to where you
+put the image.
+
+
+
+----------------------
+Challenge #4: Fixing the onClick events
+
+Replace the onClick events with {() => alert('hi')} syntax to get them
+working again.
+
+
+
+----------------------
+Bonus Challenge #1: DRY out the onClick events
+
+1. Create methods called onCorrectAnswer and onWrongAnswer.
+
+2. Make those methods do the alert
+
+
+----------------------
+Bonus Challenge #2:
+
+Add above everything:
+    state = {
+        correct: 0,
+    };
+
+Then do:
+
+    setState({correct: this.state.correct + 1});
+
+on every correct answer.
+
+Finally, show this in a box on the page.
+
+
+----------------------
+Bonus Challenge #3:
+
+Repeat #2, but for incorrect answers.
+
+

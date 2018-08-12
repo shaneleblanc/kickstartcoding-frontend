@@ -1,0 +1,53 @@
+GitHub Profile Search
+
+Getting started:
+Copy the node_modules directory from a previous activity into this
+directory, and then get started by running:
+
+    npm run start
+
+----------------------
+Challenge #1: console.log & React Dev Tools
+
+Adding console.log is always a good idea. Add one to the onRefresh
+method, as such:
+
+    console.log('Getting clicked!');
+
+This will let you debug that it is indeed getting clicked with a given
+username typed-in.
+
+----------------------
+Challenge #2: Implementing fetch
+
+Using previous activities and your cheatsheet as a guide, add in a fetch
+to the onSubmit method. For now, just console.log the result.
+
+
+----------------------
+Challenge #3: Add setState after fetch
+
+For successful fetches, we now want to do a setState to set the results
+in the state and re-render the application. This should be done in the
+last .then() callback. You can use something like:
+
+  this.setState({
+      results: data,
+  });
+
+If you do it correctly, it should list all the repos for the person
+who's name you typed in!
+
+
+----------------------
+Challenge #4: Add a loading state
+
+A common pattern is to display a "spinner" (GIF or other image that
+spins) when you are loading data.
+
+1. Create a new state property called isLoading and set it to be "true"
+when you first "kick off" the search.  Set it to be "false", when you
+receive the response.
+
+2. Make the loading GIF only appear when the isLoading is "true"
+

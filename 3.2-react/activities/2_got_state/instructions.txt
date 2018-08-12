@@ -1,0 +1,172 @@
+Game of Thrones Trivia, Part 2
+
+Getting started:
+Copy the node_modules directory from a previous activity into this
+directory, and then get started by running:
+
+    npm run start
+
+----------------------
+Challenge #1: console.log
+
+Adding console.log is always a good idea. Add one to the render()
+method right before the return statement like such:
+
+    console.log('rendering with state:', this.state);
+
+This will let you know every time your component is getting rendered,
+along with the value of the state. Very useful for debugging!
+
+----------------------
+Challenge #2: Add wrong answer counter
+
+See something wrong? When we click on a wrong answer, it doesn't
+increment the wrong answer counter. We need to increment incorrect every
+time a user clicks on an incorrect answer.
+
+1. Add to the onWrongAnswer method similar code to the onCorrectAnswer
+method, to make the wrongGuessCount increment every time they guess an
+answer incorrectly.
+
+2. Confirm it is working using the console.log from the previous
+activity.
+
+3. Add it to the guesses box so it shows in the bottom right
+
+
+
+
+----------------------
+Challenge #3: Conditional rendering
+
+If the correctGuessCount exceeds 4, you should include a message in an
+h2 tag within the .Guesses div, that says "Good job!"
+
+HINT 1: Use the following syntax for a short-hand "if statement" in JSX:
+    {
+        this.state.answer === 42 ? (
+            <p>The answer is 42</p>
+        ) : (
+            <p>Nope, no answer</p>
+        )
+    }
+
+HINT 2: Use "null" wherever you don't want any element at all.
+
+Reason we use these: This is rather arbitrarily called the "ternary
+operator". It is common in JSX, since JSX templating -- or
+"interpolation" -- only supports "expressions" and not statements,
+meaning if, for, while, are all not supported within the JSX code.
+
+----------------------
+Challenge #4: Prevent multiples per question
+
+Presently we aren't storing anywhere in the state whether or not we have
+answered a particular question, which means we can try it multiple
+times. That's no good.
+
+NOTE: This won't be very DRY. That's okay for now.
+
+1. Add a parameter to the methods onWrongAnswer and onCorrectAnswer
+called "question number".
+
+2. See where we invoke the methods in the JSX? Add in arguments 0, 1,
+2, 3, and 4, to each of the 5 questions, respectively.
+
+3. The state can have nested data. Add a new property to state called
+"questionsAnswered". It should start as an empty object.
+
+4. Make it so that with both onWrongAnswer and onCorrectAnswer it
+updates the questionsAnswered object to true for that number. Verify it
+is working by checking the results of console.log. In the end, your
+state should look something like:
+    {
+        correctGuessCount: 1,
+        wrongGuessCount: 2,
+        questionsAnswered: {
+            0: true,
+            2: true,
+            4: true,
+        },
+    }
+
+HINT: This is trickier than the previous setState, since we have nested
+objects. Try something like:
+
+    this.state.questionsAnswered[questionNumber] = true;
+
+    this.setState({
+        questionsAnswered: this.state.questionsAnswered,
+    });
+
+NOTE: Following the previous hint will cause a warning. It's okay to
+ignore this for now.
+
+----------------------
+Challenge #5: Prevent multiples per question
+
+Now that you modify the state to record when they answer a trivia
+question, you need to "lock" that question, and show the explanatory
+text. Use the "conditional rendering" technique to show the explanatory
+text while hiding the buttons.
+
+Hint: Make sure you conditionally render .Question-options, otherwise
+you might get the following error:
+
+Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag
+
+----------------------
+Challenge #6: Show "right" or "wrong"
+
+In addition to removing the options, show if the question was answered
+correctly or incorrectly. For example, replace the buttons with Correct!
+or Wrong! when they answer.
+
+Hint: This is challenging, and will require changes to how you are
+modifying the state.
+
+
+----------------------
+Challenge #7: Show Quiz Results
+
+When they have finished taking the quiz, we want it to "end" and show
+them the results. One good pattern to accomplish this is writing another
+method just for rendering this state.
+
+1. Create a new method called renderQuizResults. Use this as an example:
+
+    renderQuizResults = () => {
+        return (
+            <h1 className="Header">
+                You got 3/5 correct! Good job.
+            </h1>
+        );
+    };
+
+2. Add an if-statement to the render function to optionally return this
+method, if (and only if) they have answered every quiz.
+
+3. Modify the method to include their actual results.
+
+
+
+----------------------
+Advanced Bonus Activity #1: Fully DRY
+
+We'll get to idiomatic ways to loop next class, but can you figure out
+how to DRY this out to store the questions in an array and loop through
+them?
+
+
+----------------------
+Advanced Bonus Activity #2: Conditionally add CSS classes
+
+CSS transition effects and React are a match made in heaven. Take a look
+at the App.css and examine the styling for Question-explanation.  Notice
+there is some commented out code. Uncomment it.
+
+Can you make it so that it will conditionally add classes such that it
+"fades in"?
+
+(No solution included since it conflicts with previous ones.)
+

@@ -1,0 +1,248 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 5.3
+
+
+[slide]
+title=Crash Course in MERN
+
+[slide]
+title=MERN
+markdown : '''
+MongoDB, Express.js, React, Node
+![MERN](file://./images/mern.jpg)
+'''
+
+
+
+[slide]
+title=MongoDB
+
+
+[slide]
+title=MongoDB
+markdown : '''
+> ![MERN](file://./images/mongodb.png)
+
+* **MongoDB** is a popular noSQL database system
+
+* Originally developed for "big data" applications, it is also often used by
+  Node.js based start-ups in the MERN stack
+
+* Compared with other technologies we've used, has the most well-funded
+  marketing and sales teams (e.g. their website is covered with stock photos,
+  marketing-speak and bold claims)
+
+### Key Terms
+
+* noSQL - an umbrella term for databases that don't use SQL
+'''
+
+[slide]
+title=MongoDB in a Nutshell
+markdown : '''
+# Have some JSON data? Put it in a MongoDB!
+
+'''
+
+
+[slide]
+title=MongoDB
+markdown : '''
+![mongo](file://./images/insertone.png)
+'''
+
+[slide]
+title=MongoDB
+markdown : '''
+### Terminology
+
+* Different terminology from SQL:
+
+> ![mongo](file://./images/insertone.png)
+
+| SQL         | MongoDB     |
+| ----------- | ----------- |
+| database    | database    |
+| table       | collection  |
+| row         | document    |
+| column      | field       |
+| id          | ObjectId    |
+
+### HUGE Differences
+* By default, has no schema / type checking, will accept any structure of
+  JSON data
+* Can have nested data... e.g. arrays within arrays, arrays in objects, etc
+'''
+
+[slide]
+title=Intro to MongoDB
+
+[slide]
+title=DEMO: mongodb
+editor=./guides/example_class_mlab.txt
+terminal=./demos/
+
+
+[slide]
+title=ACTIVITY 1: mongodb practice
+editor=./activities/1_mongo_practice/instructions.md
+
+[slide]
+title=SOLUTION 1: mongodb practice
+editor=./solutions/1_mongo_actions.txt
+
+
+[slide]
+title=MongoDB + Node
+
+
+[slide]
+title=ACTIVITY 2: mongodb node
+editor : '''
+./activities/2_mongo_node/createdata.js
+./activities/2_mongo_node/readdata.js
+'''
+
+[slide]
+title=SOLUTION 2: mongodb node
+editor : '''
+./solutions/2_mongo_node/createdata.js
+./solutions/2_mongo_node/readdata.js
+'''
+terminal=./solutions/2_mongo_node/
+
+
+[slide]
+title=Final Group Projects
+
+[slide]
+title=Final Group Projects - General Reqs
+markdown : '''
+All group projects with Kickstart Coding must adhere to the following criteria:
+
+1. **Must be a full-stack web application, with both frontend and backend
+components**
+
+2. Must have a presentation.
+
+3. Must be deployed live to Heroku.
+
+4. Must have a polished, attractive user-interface, be clear in function to the
+general public, and not be filled test data or placeholders.
+
+5. Must have multiple pages displaying different data.
+
+6. Must support user-supplied data which it saves to a database.
+
+7. Must use GitHub to collaborate.
+'''
+
+[slide]
+title=Final Group Projects - Frontend
+markdown : '''
+* In addition to the general requirements, the Kickstart Frontend project must
+  use React and React Router to build a single-page app.
+
+* There must be a back-end that saves data to the database, and exposes an API
+  that allows the front-end to read and write data to and from the database.
+
+* You may use Postgres or MongoDB for your database system
+
+* Must use 1 or more `npm` packages or libraries that was not used in class
+
+* The backend may be written in Python, or Node.js
+
+* Some use of advanced CSS techniques, such as CSS grid, flexbox, animations,
+  transforms, SVG, etc
+'''
+
+[slide]
+title=Final Group Projects - First Due Date
+markdown : '''
+* Group requests... by Monday!
+
+* Groups Must be 2-4 people
+'''
+
+[slide]
+title=Final Group Projects - Questions?
+
+[slide]
+title=Group Projects Quick Brainstorm!!
+markdown : '''
+* Spend 5-10 minutes discussing ideas with people next to you
+
+* Get ideas by looking up React modules, data sets, APIs, etc
+
+* Post 1-2 cool ideas to #Class chat
+'''
+
+[slide]
+title=Express.js
+markdown : '''
+![MERN](file://./images/mern.jpg)
+'''
+
+[slide]
+title=Express.js
+markdown : '''
+* Express is the most popular web framework for Node.js
+
+* It has a lightweight, minimalist, and unopinionated approach contrasts with Rails
+  or Django
+
+* This approach lends well to quickly putting together small API projects
+'''
+
+[slide]
+title=DEMO: express example
+terminal = ./demos/express_example/
+editor = ./demos/express_example/server.js
+
+
+[slide]
+title=MongoDB + Express.js + Node.js
+
+
+[slide]
+title=ACTIVITY 3 - express API
+editor=./activities/3_express_api/server.js
+
+
+[slide]
+title=SOLUTION 3 - express API
+editor=./solutions/3_express_api/server.js
+
+
+
+[slide]
+title=MongoDB + Express.js + React.js + Node.js
+
+
+[slide]
+title=ACTIVITY 4 - MERN full stack
+
+
+[slide]
+title=DEMO - mern
+editor : '''
+./demos/blog_crud/server.js
+./demos/blog_crud/client/**.js
+'''
+
+
+[slide]
+title=ACTIVITY 4 - mern
+editor=./activities/4_mern/instructions.md
+
+
+[slide]
+title=SOLUTION 4 - mern
+editor=./solutions/4_mern/client/src/App.js
+
+
+

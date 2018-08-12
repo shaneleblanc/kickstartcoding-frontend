@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bare-css@2.0.3/css/bare.min.css" />
+    </head>
+    <body>
+        <nav>
+            <section>
+                <h1>Ad Lib Game</h1>
+            </section>
+        </nav>
+        <section>
+            <input placeholder="Name" id="name" />
+            <input placeholder="Noun" id="noun" />
+            <input placeholder="Adjective" id="adjective" />
+            <input placeholder="Large number" id="large-number" />
+            <input placeholder="Family name" id="family-name" />
+            <input placeholder="Country" id="country" />
+            <input placeholder="Silly noun" id="silly-noun" />
+            <button onClick="render()">Render</button>
+            <section id="output">
+            </section>
+        </section>
+
+        <script>
+
+            let state = {
+                name: '',
+                noun: '',
+                adjective: '',
+                largeNumber: '',
+                familyName: '',
+                sillyNoun: '',
+            };
+
+            function render() {
+
+                /* Challenge #1: */
+                console.log('rerendering');
+                console.log(state);
+
+                updateStateFromInputs();
+
+                let output = document.querySelector('#output');
+                output.innerHTML = `
+                    Hi Instructors, <br />
+
+                    I will attending class remotely today. I have come down
+                    with a case of "${ state.sillyNoun } syndrome" after
+                    injesting a ${ state.noun } and have a
+                    horribly ${ state.adjective } liver. We have made an
+                    appointment with Dr. ${ state.familyName}, who is the
+                    world's greatest expert on ${ state.sillyNoun } syndrome
+                    and has ${ state.largeNumber } degrees in sciencing from
+                    ${ state.country } University. Dr.  ${state.familyName} will
+                    send you all the information you need.  Thank you!<br />
+
+                    Thanks, <br />
+                    ${state.name}
+                `;
+            }
+
+            function updateStateFromInputs() {
+                /* Challenge #2: */
+                let nameInput = document.querySelector('#name');
+                let name = nameInput.value;
+
+                /* Challenge #3: */
+                let nounInput = document.querySelector('#noun');
+                let noun = nounInput.value;
+
+                /*
+                    Challenge #3:
+                    Refactored:
+                */
+                setState({
+                    name: name,
+                    noun: noun,
+                    adjective: document.querySelector('#adjective').value,
+                    largeNumber: document.querySelector('#large-number').value,
+                    familyName: document.querySelector('#family-name').value,
+                    country: document.querySelector('#country').value,
+                    sillyNoun: document.querySelector('#silly-noun').value,
+                });
+            }
+
+
+            /*
+                Bonus Challenge:
+                Have it randomly select from 2 madlibs. Here is one written for
+                you as a template literal. It will require some tweaking before
+                use.
+                `
+                    In order to wash your ${noun}, you must wet your
+                    ${sillyNoun}. Then, grasp it across your face
+                    ${largeNumber} times. This will wash off any remaining
+                    ${familyName}. When you are done you should take the most
+                    ${adjective} cloth you own and clean it.  This will keep
+                    also keep away people named ${name} from touching your
+                    ${noun}.  Consult Dr. ${familyName} if you experience
+                    discomfort in your ${noun}.  This works well on your
+                    ${sillyNoun} too! 
+                `
+            */
+            function getMadLib() {
+                if (Math.random() < 0.5) {
+                    return `
+                        In order to wash your ${noun}, you must wet your
+                        ${sillyNoun}. Then, grasp it across your face
+                        ${largeNumber} times. This will wash off any remaining
+                        ${familyName}. When you are done you should take the
+                        most ${adjective} cloth you own and clean it.  This
+                        will keep also keep away people named ${name} from
+                        touching your ${noun}. Consult Dr. ${familyName} if you
+                        experience discomfort in your ${noun}.  This works well
+                        on your ${sillyNoun} too! 
+                    `;
+                } else {
+                    return `
+                        Hi Instructors, <br />
+
+                        I will attending class remotely today. I have come down
+                        with a case of "${ state.sillyNoun } syndrome" after
+                        injesting a ${ state.noun } and have a
+                        horribly ${ state.adjective } liver. We have made an
+                        appointment with Dr. ${ state.familyName}, who is the
+                        world's greatest expert on ${ state.sillyNoun } syndrome
+                        and has ${ state.largeNumber } degrees in sciencing from
+                        ${ state.country } University. Dr.  ${state.familyName} will
+                        send you all the information you need.  Thank you!<br />
+
+                        Thanks, <br />
+                        ${state.name}
+                    `;
+                }
+            }
+
+
+            /*
+                Advanced Challenge: (Tough!)
+                Try using onKeyUp event so that the madlib updates as they type.
+
+                Can you do it DRYly? HINT: Use a "name" attribute in HTML, and
+                access "event.target.name".
+            */
+
+
+
+
+
+            function setState(newState) {
+                // Object.assign is a built-in function to JavaScript that updates
+                // one object with another
+                Object.assign(state, newState);
+            }
+        </script>
+    </body>
+</html>

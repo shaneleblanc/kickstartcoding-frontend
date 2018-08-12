@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bare-css@2.0.3/css/bare.min.css" />
+    </head>
+    <body>
+        <section id="output">
+        </section>
+        <section>
+            <button onClick="setTitleDuck()">Set to Duck</button>
+            <button onClick="setTitleGoose()">Set to Goose</button>
+        </section>
+<script>
+    let state = {
+    };
+
+    function render() {
+        let output = document.querySelector('#output');
+        output.innerHTML = `
+            <h1>${state.animal}</h1>
+        `;
+    }
+
+    function setTitleDuck() {
+        state.animal = 'Duck';
+        render();
+    }
+
+
+    function setTitleGoose() {
+        state.animal = 'Goose';
+        render();
+    }
+
+</script>
+
+</body>
+</html>

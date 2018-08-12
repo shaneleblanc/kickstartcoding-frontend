@@ -1,0 +1,134 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 1.2
+
+[slide]
+title=Grid & Animations
+
+
+[slide]
+title=ACTIVITY 1 - css quiz
+editor=./activities/1_css_quiz.txt
+
+
+[slide]
+title=SOLUTION 1 - css quiz
+editor=./solutions/1_css_quiz.txt
+
+[slide]
+title=Homework 1
+browser=https://michaelpb.github.io/sols/
+
+[slide]
+title=CSS Grid
+markdown : '''
+* CSS grid - A super brand new feature of CSS that allows us to position
+  elements in our page into a grid, completely replacing Bootstrap grid (!!)
+
+![grid template areas](file://./images/grid-template-areas.png)
+'''
+
+[slide]
+title=Can I use CSS Grid?
+browser=https://caniuse.com/
+
+
+[slide]
+title=DEMO: CSS Grid
+editor=./demos/grid.html
+browser=./demos/grid.html
+
+
+[slide]
+title=ACTIVITY 2: happy little grid
+markdown : '''
+![happy little rosses](file://./images/rossgrid1.png)
+'''
+
+[slide]
+title=ACTIVITY 2: happy little grid
+markdown : '''
+![happy little rosses](file://./images/rossgrid2.png)
+'''
+
+[slide]
+title=SOLUTION 2: happy little grid
+editor=./activities/2_happy_little_grid/css/site.css
+
+
+[slide]
+title=CSS Animation
+markdown : '''
+CSS supports many features to make smooth animations possible, ranging from
+gradually fading colors, to moving elements around the screen.
+
+* This is especially useful for more modern, attractive designs
+
+### Key Terms
+* **CSS transitions** - a somewhat new feature of CSS that permits properties to
+  animate from one state to another, instead of instantly "click" to the new look
+* **CSS animations** - allows more complicated animations that can have
+  multiple transitional states known as "key frames"
+* **key frame** - term for setting transitional states in an animation
+* `transform` - a useful property that allows 2D or 3D transformation of
+  elements (spin, rotate, etc), often used in conjunction with animation
+
+'''
+
+[slide]
+title=DEMO: CSS Animation
+editor=./demos/animations.html
+browser=./demos/animations.html
+
+
+[slide]
+title=ACTIVITY 3: animation farm
+browser=./solutions/3_animation_farm/index.html
+
+[slide]
+title=ACTIVITY 3: animation farm
+editor=./solutions/3_animation_farm/css/site.css
+
+[slide]
+title=A Gentle Intro to JS
+
+[slide]
+title=JS Plugins
+markdown : '''
+* There are a lot of easily addable JavaScript libraries that can add awesome
+  features to your site with relatively little effort
+
+### Key Terms
+* **library** -- code that someone else wrote that we can use
+
+* `script` tag -- JavaScript is included into a page with a `script` tag
+
+* **CDN** -- Much like we did for bootstrap, we can use a CDN to quickly play
+  around with 3rd party libraries with little effort
+
+```
+<script src="http://somesite.com"></script>
+```
+'''
+
+[slide]
+title=DEMO: Drop in JS
+editor=./demos/dropinjs.html
+browser=./demos/dropinjs.html
+
+
+[slide]
+title=ACTIVITY 4: drop in scripts
+editor=./activities/4_drop_in_scripts.html
+
+[slide]
+title=SOLUTION 4: drop in scripts
+editor=./solutions/4_drop_in_scripts.html
+
+[slide]
+title=Questions?
+
+

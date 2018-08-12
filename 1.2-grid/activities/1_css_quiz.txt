@@ -1,0 +1,37 @@
+CSS REVIEW DISCUSSION MARATHON
+
+Define VERY BRIEFLY each of these terms in your own words to the student
+next to you. If neither of you can define one, skip over and focus on
+the others.
+
+* css selector
+* responsive design
+* media query
+* specificity
+
+* pseudo-classes
+* pseudo-elements
+
+* margin
+* padding
+
+* inline
+* block
+* inline-block
+* div
+* span
+
+* box model
+* box-sizing
+
+* DOM
+* parent
+* child
+* ancestor
+* descendent
+* position
+* static
+* relative
+* absolute
+* fixed
+

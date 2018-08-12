@@ -1,0 +1,2 @@
+.BoxedText { border: 3px groove gray; padding: 3px; color: black; background: rgba(255, 255, 255, 0.5); }
+.BoxedText--dark { border: 3px groove gray; padding: 3px; color: white; background: black; }

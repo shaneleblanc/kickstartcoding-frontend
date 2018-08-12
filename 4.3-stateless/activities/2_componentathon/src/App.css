@@ -1,0 +1,25 @@
+body {
+  background: url('https://i.imgur.com/SqSxpmz.jpg') fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.App-header {
+  height: 14vh;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 3vh;
+  box-sizing: border-box;
+}
+
+.App-library {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border: 2px black ridge;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  min-height: 86vh;
+  padding: 20px;
+  box-sizing: border-box;
+}

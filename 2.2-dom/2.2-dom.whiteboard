@@ -1,0 +1,92 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 2.2
+
+
+[slide]
+title=ACTIVITY 1 - syntax_warmup
+editor=./activities/1_syntax_warmup.html
+
+
+[slide]
+title=SOLUTION 1 - syntax_warmup
+editor=./activities/1_syntax_warmup.html
+
+[slide]
+title=DOM - Review
+
+[slide]
+title=DOM Manipulation - CRUD
+
+[slide]
+title=CRUD
+markdown : '''
+The CRUD acronym is typically ONLY used for databases... but let's think about
+it with DOM for today.
+'''
+
+
+[slide]
+title=DOM operations
+markdown : '''
+* Create - `let element = document.createElement('p');`
+* Read   - `let element = document.querySelector('query')`, `document.querySelectorAll`
+* Update - `element.textContent = 'New text'`, `element.innerHTML = '<strong>Ok!</strong>'`
+* Delete - `element.remove()`
+'''
+
+
+[slide]
+title=ACTIVITY 2 - todo crud
+editor=./activities/2_todo_crud.html
+browser=./solutions/2_todo_crud.html
+
+
+[slide]
+title=SOLUTION 2 - todo crud
+editor=./solutions/2_todo_crud.html
+
+
+[slide]
+title=State
+
+
+[slide]
+title=DEMO - render from state
+editor=./demos/state_example.html
+browser=./demos/state_example.html
+
+[slide]
+title=ACTIVITY 3 - render from state
+editor=./activities/3_render_from_state.html
+browser=./solutions/3_render_from_state.html
+
+
+[slide]
+title=SOLUTION 3 - render from state
+editor=./solutions/3_render_from_state.html
+
+
+[slide]
+title=Fetch & APIs
+
+
+[slide]
+title=DEMO - fetching from APIs
+editor=./demos/4_api.html
+browser=./demos/4_api.html
+
+[slide]
+title=ACTIVITY 3 - render from state
+editor=./activities/3_render_from_state.html
+browser=./solutions/3_render_from_state.html
+
+
+[slide]
+title=SOLUTION 3 - render from state
+editor=./solutions/3_render_from_state.html
+
+

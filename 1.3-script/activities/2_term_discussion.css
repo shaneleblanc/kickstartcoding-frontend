@@ -1,0 +1,24 @@
+/*
+    Discuss the following CSS properties with student(s) next to you.
+    Can you define:
+    1. In your own words what they are useful for
+    2. An example of valid values for each one
+*/
+? {
+    grid-template-columns: defining the number of columns in a css grid
+    grid-template-rows: defining the number of rows in a css grid
+
+    grid-gap: the amount of space between rows and columns
+
+    grid-column: specifies the column to place the item into
+    grid-row: specifies the row to place the item into
+    transition: makes an effect happen over time
+    animation: uses keyframes to animate elements
+    justify-content: choose from a set of horizontal alignment options
+    align-items: choose from a set of vertical alignment options
+
+    flex-direction: defines how items are ordered in the flexbox container
+    flex-wrap: whether items will wrap or not
+
+    align-self: allows you to override alignment and specify alignment option for this element
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bare-css@2.0.3/css/bare.min.css" />
+    </head>
+    <body>
+        <nav>
+            <section>
+                <h1>Gif Search</h1>
+            </section>
+        </nav>
+        <section>
+            <input placeholder="Search for a Gif" id="search" />
+            <button onClick="doFetch()">Search</button>
+            <button onClick="displayOutput()">Display results</button>
+        </section>
+        <section id="output">
+        </section>
+
+<script>
+    //http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=kitten
+    let state = {
+        data: [
+            {
+            },
+        ],
+    };
+
+    function displayOutput() {
+        console.log('rendering');
+        let output = document.querySelector('#output');
+        output.innerHTML = "";
+        for (let gif of state.data){
+          output.innerHTML += `<img src="${gif.images.original.url}">`;
+        }
+
+        // Challenge #4: Fill in code to display all the GIFs that resulted
+        // from the search. Use the Studio Ghibli demo as a reference.
+    }
+
+    function doFetch() {
+        let searchTerm = document.querySelector('#search').value;
+        fetch(`http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${searchTerm}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                state.data = data.data;
+            });
+        /*
+            Challenge #3: Using "fetch", make it update the data with the GIF
+            data fetched from the API, searching for kittens.
+
+            HINT: Make it first search hard-coded for kittens only, for now.
+        */
+
+        // Challenge #5: Put it all together. Make it so that it gets the
+        // search input, searches for that, then updates the state and
+        // rerenders.
+    }
+</script>
+</body>
+</html>

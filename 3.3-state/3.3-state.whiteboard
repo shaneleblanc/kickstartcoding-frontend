@@ -1,0 +1,128 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 3.3
+
+[slide]
+title=React - Lifecycle & Looping
+
+[slide]
+title=Quick Review: State & Dataflow
+markdown : '''
+* `state` - everything that changes in a React app gets stored in the state
+* `setState` - changes state, causes a "re-render"
+* `render` - re-generating the page to show the new data via JSX templating
+  (technically, "interpolation")
+
+![diagram](file://./images/unidirectionaldataflow.png)
+'''
+
+[slide]
+title=ACTIVITY 1 - weather api
+editor=./activities/1_weather_api/instructions.txt
+
+[slide]
+title=SOLUTION 1 - weather api
+editor=./solutions/1_weather_api/src/App.js
+
+
+[slide]
+title=React Lifecycle
+markdown : '''
+![diagram](file://./images/circle_of_life.gif)
+'''
+
+
+[slide]
+title=React Lifecycle
+markdown : '''
+* **Life-cycle method** are specially named methods that are called at specific
+  times in the "life" of a React component (e.g. App)
+
+* They are used when you want to "trigger" a certain thing to happen at a
+  certain time
+
+* By far, the most common use is when you want to do a fetch from an API when
+  you first load the page
+'''
+
+[slide]
+title=React Lifecycle
+markdown : '''
+
+# Meet the Lifecycles!
+
+> ![diagram](file://./images/flintstones.jpg)
+
+### Commonly used
+* `componentDidMount()` - whenever your component (e.g. App) first is displayed
+* `render()` - the method that actually renders your app -- we've been using
+  this one all this time
+
+### Rarely used
+* `componentDidUpdate()` - whenever your component (e.g. App) just re-rendered
+* `shouldComponentUpdate()` - if you want to skip rendering your component
+  sometimes. Most often used when "wrapping" legacy code. (e.g. jQuery) and you
+  want to prevent React from re-rendering.
+'''
+
+[slide]
+title=ACTIVITY 2 - weather lifecycle
+editor=./activities/1_weather_api/instructions.txt
+
+[slide]
+title=SOLUTION 2 - weather lifecycle
+editor=./solutions/1_weather_api/src/App.js
+
+[slide]
+title=Looping with .map
+
+[slide]
+title=Looping with .map
+markdown : '''
+* In React, one of the most popular way to do "loops" within JSX, is by using
+  the `.map` method of JavaScript arrays
+
+* These allow us to loop through an array of data generating HTML DOM elements
+  for each item
+
+* You'll see this outside of JSX, but it is most essential in JSX since in JSX
+  we don't have access to normal for loops (if you recall: only expressions are
+  allowed, so `for`, `if` and `while` are all forbidden)
+'''
+editor=./demos/MapExample.js
+
+[slide]
+title=ACTIVITY 3 - animalmap
+editor=./activities/3_animalmap/instructions.txt
+
+[slide]
+title=ACTIVITY 3 - animalmap
+editor=./solutions/3_animalmap/src/App.js
+
+[slide]
+title=Intro to ACTIVITY 4
+markdown : '''
+* For this next activity, you will be starting with a previous activity or a
+  fresh `create-react-app`
+
+* Time to combine all that you've learned of JS and React to build something
+  much larger
+
+* The goal: A full "book search engine" that uses the Open Library API to
+  search for books and display their covers
+
+* This is **hard** -- so be sure to start small, experiment, and get one thing
+  working at a time
+
+* Don't try to do everything at once. Your first goal should just be
+  successfully fetching data and console.log'ing it! Your next goal, displaying
+  it with JSX + HTML, etc.
+'''
+
+[slide]
+title=ACTIVITY 4: Book Search
+browser=http://vast-retreat-72383.herokuapp.com/
+

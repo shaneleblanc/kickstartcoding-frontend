@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bare-css@2.0.3/css/bare.min.css" />
+    </head>
+    <body>
+        <nav>
+            <section>
+                <h1>Ad Lib Game</h1>
+            </section>
+        </nav>
+        <section name="libformqt">
+            <input placeholder="Name" id="name" />
+            <input placeholder="Noun" id="noun" />
+            <input placeholder="Adjective" id="adjective" />
+            <input placeholder="Large number" id="large-number" />
+            <input placeholder="Family name" id="family-name" />
+            <input placeholder="Country" id="country" />
+            <input placeholder="Silly noun" id="silly-noun" />
+            <button onClick="render()">Render</button>
+            <section id="output">
+            </section>
+        </section>
+
+        <script>
+
+            let state = {
+                name: '',
+                noun: '',
+                adjective: '',
+                largeNumber: '',
+                familyName: '',
+                sillyNoun: '',
+            };
+
+            function render() {
+                /*
+                    Challenge #1:
+                    1. Do the first thing you do in JavaScript, e.g.
+                    console.log.  Double check in Chrome you are seeing the
+                    change appear.  Hint: To make work on activity easier, add
+                    the line: console.log(state); here in render()
+
+                    2. Once you confirm this is working, explain in your own
+                    words with students next to you what a "template literal"
+                    is, and where one appears in the code below, and what that
+                    code is doing.
+                */
+                console.log('Re-rendering');
+                updateStateFromInputs();
+                let output = document.querySelector('#output');
+                madlib1 = `
+                    Hi Instructors, <br />
+
+                    I will attending class remotely today. I have come down
+                    with a case of "${ state.sillyNoun } syndrome" after
+                    injesting a ${ state.noun } and have a
+                    horribly ${ state.adjective } liver. We have made an
+                    appointment with Dr. ${ state.familyName}, who is the
+                    world's greatest expert on ${ state.sillyNoun } syndrome
+                    and has ${ state.largeNumber } degrees in sciencing from
+                    ${ state.country } University. Dr.  ${state.familyName} will
+                    send you all the information you need.  Thank you!<br />
+
+                    Thanks, <br />
+                    ${state.name}
+                `;
+                madlib2 = `
+                    In order to wash your ${state.noun}, you must wet your
+                    ${state.sillyNoun}. Then, grasp it across your face
+                    ${state.largeNumber} times. This will wash off any remaining
+                    ${state.familyName}. When you are done you should take the most
+                    ${state.adjective} cloth you own and clean it.  This will keep
+                    also keep away people named ${state.name} from touching your
+                    ${state.noun}.  Consult Dr. ${state.familyName} if you experience
+                    discomfort in your ${state.noun}.  This works well on your
+                    ${state.sillyNoun} too!
+                `
+                random = Math.round(Math.random());
+                if (random === 1) output.innerHTML = madlib1;
+                else if (random === 0) output.innerHTML = madlib2;
+            }
+
+            function updateStateFromInputs() {
+                /*
+                    Challenge #2:
+                    The render function is correctly written. The main thing
+                    you need to do is update the state object, so that it will
+                    correctly have the data the user entered.
+
+                    Fetch the user-entered data from the "name" input, and use
+                    it to update the name variable below.
+                */
+
+
+                setState({
+                    name: document.querySelector('#name').value,
+                    noun: document.querySelector('#noun').value,
+                    adjective: document.querySelector('#adjective').value,
+                    largeNumber: document.querySelector('#large-number').value,
+                    familyName: document.querySelector('#family-name').value,
+                    country: document.querySelector('#country').value,
+                    sillyNoun: document.querySelector('#silly-noun').value,
+                });
+                /*
+                    Challenge #3:
+                    Rinse & repeat for all the inputs, so that the state gets
+                    fully "set up" with each of the input's values before
+                    rendering.
+                */
+            }
+
+
+
+
+            /*
+                Bonus Challenge:
+                Have it randomly select from 2 madlibs. Here is one written for
+                you as a template literal. It will require some tweaking before
+                use.
+                `
+                    In order to wash your ${noun}, you must wet your
+                    ${sillyNoun}. Then, grasp it across your face
+                    ${largeNumber} times. This will wash off any remaining
+                    ${familyName}. When you are done you should take the most
+                    ${adjective} cloth you own and clean it.  This will keep
+                    also keep away people named ${name} from touching your
+                    ${noun}.  Consult Dr. ${familyName} if you experience
+                    discomfort in your ${noun}.  This works well on your
+                    ${sillyNoun} too!
+                `
+            */
+
+
+            /*
+                Advanced Challenge: (Tough!)
+                Try using onKeyUp event so that the madlib updates as they type.
+
+                Can you do it DRYly? HINT: Use a "name" attribute in HTML, and
+                access "event.target.name".
+            */
+
+               const debounce = (fn, time) => {
+                 let timeout;
+
+                 return function() {
+                   const functionCall = () => fn.apply(this, arguments);
+                   // this line calls the unnamed function that is passed as the first argument to debounce
+
+                   clearTimeout(timeout);
+                   timeout = setTimeout(functionCall, time);
+                 }
+               }
+              document.querySelectorAll('input').forEach((item) => item.setAttribute('name', 'libform'));
+              document.addEventListener('keyup', debounce(function(event){
+                if (event.target.name === "libform") {
+                  render(); console.log('Key-up render sent');
+                }
+              }, 1000)); // <-- timeout for debounce
+
+
+
+
+
+            function setState(newState) {
+                // Object.assign is a built-in function to JavaScript that updates
+                // one object with another
+                Object.assign(state, newState);
+            }
+
+        </script>
+    </body>
+</html>

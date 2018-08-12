@@ -1,0 +1,111 @@
+Career Assignment Office
+
+Getting started:
+Copy the node_modules directory from a previous activity into this
+directory, and then get started by running:
+
+    npm run start
+
+----------------------
+Challenge #1: console.log & React Dev Tools
+
+Adding console.log is always a good idea. Add one to the onNameChange
+method, as such:
+
+    console.log('getting a new value!', value);
+
+If you have React Dev Tools, also bring that up and use that to figure
+out how the current form is working (only the top form box will work).
+
+
+----------------------
+Challenge #2: Implementing Date of Birth
+
+Using a similar technique you see to name, make it so that date of birth
+can be modified and the state gets updated.
+
+1. Create a new method (for now, just do console.log in it)
+
+2. Hook up an onChange event to that method
+
+3. Test that the onChange event is working, e.g. triggering the method
+
+4. Modify the method to set the state of the application
+
+
+----------------------
+Challenge #3: Implementing Most Recent Position
+
+Rinse and repeat, except for the next field, which is a textarea.
+
+Hint: The value attribute wasn't done for you this time. You'll have to
+set the value, also, to ensure it "gets" whatever is typed in.
+
+
+----------------------
+Challenge #4: Add brand new input for degrees earned
+
+For this challenge, you are are going to be creating a new input +
+methods from scratch.
+
+1. Create a new method
+
+2. Create a new default state
+
+3. Create a input or textarea hooked up to both the method and the state
+
+
+----------------------
+Challenge #5: Checkboxes
+
+Make the checkboxes function. This is tricky, since it requires setting
+the state of a nested object within the state.
+
+
+----------------------
+Challenge #6: Salary Calculator
+
+Make the salary calculator perform the math equation as you type it in.
+
+As with previous activities this will require creating new methods
+
+
+----------------------
+Challenge #7: Robot checker
+
+Examine the final two boxes.
+
+1. Hook up methods, state, and events such that typing a number in the
+box will compare the operation to a result, and make the boxes turn
+either red or green based on if they are correct or not.
+
+2. Once you get it working, see if you can write it more succinctly with
+anonymous functions within the JSX itself (e.g. without any extra
+methods). This is not often the most maintainable way to do it, but
+sometimes is expedient.
+
+
+
+
+----------------------
+Bonus Challenge: Form results
+
+Add a "submit" button to the end that shows the "form" results when
+clicked. This will cause the form to disappear, and instead a results
+page to show (such as being rendered in a separate method.)
+
+The submit button should only show if both robot checker are correct.
+
+
+----------------------
+Further Reading: How do I DRY this up?
+
+All these methods aren't too DRY, are they? Wondering if you can make a
+more generalized method to do this? Well, the answer is you can! Here
+is a blog post on a common pattern in React to make a single, more
+generic method that can handle multiple inputs:
+
+https://medium.com/@bretdoucette/understanding-this-setstate-name-value-a5ef7b4ea2b4
+
+It has it's limitations, but will work for many situations.
+

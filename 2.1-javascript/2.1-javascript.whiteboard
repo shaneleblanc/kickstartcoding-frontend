@@ -1,0 +1,208 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 2.1
+
+[slide]
+title=JavaScript
+
+
+[slide]
+title=JavaScript
+markdown : '''
+![climbing](file://./images/brace_yourself.jpg)
+'''
+
+
+[slide]
+title=Going Forward
+markdown : '''
+* JavaScript might be **easier** than Python for a few reasons:
+    * We're dealing with graphical stuff now, so everything is much less abstract
+    * There some fantastic graphical tools for debugging JS, such as Google Dev tools
+    * There is a huge community of other junior developers using it
+
+* JavaScript tends to be **harder** than Python for a few reasons:
+    * JavaScript often "says nothing" when things go wrong, unless you
+      explicitly check
+    * JavaScript has a much more verbose syntax, which means its easier to make
+      typos
+    * There are many more variants of JavaScript in existence (legacy, modern
+      ES6+, JSX, TypeScript), and many competing standards, which makes
+      following examples online harder
+    * JavaScript traditionally uses callbacks for any operation that involves
+      I/O (reading and writing files, retrieving or storing data to/from a
+      database, and fetching data from APIs) -- these are tricky and tedious
+    * Industry best practices in JavaScript move infamously quickly, meaning
+      things get outdated on a yearly basis
+'''
+
+
+[slide]
+title=Going Forward
+markdown : '''
+### The biggest gotchas
+* JavaScript often "says nothing" when things go wrong, unless you explicitly
+  check
+* JavaScript has a much more verbose syntax, which means its easier to make
+  typos
+
+### How to deal with Python break-up...?
+'''
+
+[slide]
+title=New (JavaScript) Rules
+markdown : '''
+![new rules](file://./images/new_rules.gif)
+'''
+
+[slide]
+title=New (JavaScript) Rules
+markdown : '''
+One, always `console.log` when you attach an event
+
+Two, always `console.log` when you fetch an element
+
+Three, always `console.log` at the start of a script
+
+![new rules](file://./images/new_rules.gif)
+'''
+
+
+[slide]
+title=New (JavaScript) Rules
+markdown : '''
+# Generally, just `console.log` everywhere
+'''
+
+
+[slide]
+title=JavaScript
+markdown : '''
+### KEY TERMS
+* JavaScript - one of the 3 programming languages of the web. Object oriented,
+  imperitive language Has same fundamental programming concepts as those found
+  in Python
+* debugging console - always have this open when developing JavaScript
+* DOM - document object model, the tree structure that represents the code on
+  the page, and is modifiable by JavaScript
+* DOM manipulation - manipulating what is visible on the page using JavaScript
+  --- the main purpose of JavaScript
+
+### Key JavaScript code
+* `let` - for creating variables
+* `document.querySelector` - fetch an element from the page using a CSS
+  selector
+* `document.querySelectorAll` - fetch an array of elements from the page using
+  a CSS selector
+'''
+
+
+[slide]
+title=DEMO - querySelector, console.log
+editor=./demos/queryselector.html
+browser=./demos/queryselector.html
+
+
+[slide]
+title=ACTIVITY 1 - catch fish
+markdown : '''
+Remember the onClick attribute:
+
+```
+<button
+onClick="
+console.log('Getting clicked');
+let button = document.querySelector('#some-id');
+console.log(button);
+"
+>Click me</button>
+```
+'''
+editor=./activities/1_catch_fish.html
+
+
+[slide]
+title=SOLUTION 1 - catch fish
+editor=./solutions/1_catch_fish.html
+
+[slide]
+title=You know what comes next...
+![mondays](file://./images/mondays.gif)
+
+[slide]
+title=QUIZ
+
+[slide]
+title=Script tags
+
+[slide]
+title=Script tags
+markdown : '''
+### Key JavaScript code
+* `script tag` - lets us put JavaScript code that runs on page load
+* `if` - if statements, just like other languages
+* `function` - function definition, just like other languages (called `def` in
+  Python)
+* `document.createElement` - create a new element from "thin air"
+'''
+
+[slide]
+title=DEMO - script tags
+editor=./demos/js_script_tag.html
+browser=./demos/js_script_tag.html
+
+
+
+[slide]
+title=ACTIVITY 2 - farmfeeder
+editor=./activities/2_farmfeeder/index.html
+browser=./solutions/2_farmfeeder/index.html
+
+
+[slide]
+title=SOLUTION 2 - farmfeeder
+editor=./solutions/2_farmfeeder/index.html
+
+
+[slide]
+title=Data types and for loops
+
+[slide]
+title=Data types and for loops
+markdown : '''
+### JavaScript code organization
+* render function - make a single function that rerenders the page (we'll be
+  revisiting this with React)
+
+### JavaScript language features
+* `for .. of` - for loops in JavaScript
+* `array` - what JavaScript calls lists
+* `object` - what JavaScript calls dictionaries (kinda)
+* strings, numbers, etc more or less the same
+'''
+
+[slide]
+title=DEMO - data types
+editor=./demos/datatypes.html
+browser=./demos/datatypes.html
+
+
+
+[slide]
+title=ACTIVITY 3 - todo
+editor=./activities/3_todo.html
+browser=./solutions/3_todo.html
+
+
+[slide]
+title=SOLUTION 3 - todo
+editor=./solutions/3_todo.html
+
+[slide]
+title=Questions?
+
+
+

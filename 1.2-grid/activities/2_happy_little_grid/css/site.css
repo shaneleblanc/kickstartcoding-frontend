@@ -1,0 +1,52 @@
+/* Challenge 1 */
+/*
+    Look at the solution image provided. Draw on a piece of paper or a drawing
+    program a simple wireframe where you think the grid should be.
+
+    HINT: Include in your grid the margins between the side of the page and the
+    content. These will just be grid cells that we won't put anything into.
+*/
+
+/* Challenge 2 */
+/*
+    Create the main grid for the .Container element. Think about the width of
+    each column and height of each row. You may choose to either make it either
+
+    HINT: You'll have to start with
+        .Container {
+            display: grid;
+        }
+*/
+.Container {
+  display: grid;
+  grid-template-columns: 15% 20% 50% 15%;
+  grid-template-rows: 100px auto;
+}
+
+/* Challenge 3 */
+/*
+    Make the .Navigation, .Sidebar, and .MainContent start at the correct
+    columns and rows and occupy the correct number of columns and rows.
+*/
+.Navigation {
+grid-column: 3 / span 2;
+}
+
+.Sidebar {
+grid-column: 2;
+}
+
+.MainContent {
+grid-column: 3;
+}
+/* Bonus Challenge */
+/*
+    Can you make it "responsive design"? That is can you make it so the margins
+    get "used up" as the window is resized, and when in a much smaller display,
+    it will not have margins whatsoever?
+*/
+
+/*
+    Got it looking right? Head on over to 2_happy_little_grid_part_2 for
+    Challenge 4....
+*/

@@ -1,0 +1,183 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 4.2
+
+[slide]
+title=Data Flow
+
+[slide]
+title=Recap
+markdown : '''
+* "unidirectional data flow"
+
+* `props`
+
+* `state`
+
+* "componentization"
+'''
+
+
+[slide]
+title=Recap
+markdown : '''
+* "unidirectional data flow" - the idea that data must be passed down from
+  state, and from parent components to children components
+
+* `props` - *immutable*, represents data, content, or options being passed down
+  from the parent component
+
+* `state` - *mutable*, can be changed with .setState
+
+* "componentization" - the process of breaking down bigger applications into
+  components (not totally a real word)
+'''
+
+
+[slide]
+title=Componentization
+markdown : '''
+![reddit](file://./images/reddit.png)
+'''
+
+
+[slide]
+title=Componentization
+markdown : '''
+![reddit](file://./images/reddit_componentized.png)
+'''
+
+[slide]
+title=ACTIVITY 1 - sleck components
+editor :'''
+./activities/1_sleck_components/instructions.md
+./activities/1_sleck_components/src/App.js
+./activities/1_sleck_components/src/components/**/*.js
+'''
+browser = ./solutions/1_sleck_components/build/index.html
+
+
+[slide]
+title=SOLUTION 1 - sleck components
+editor :'''
+./solutions/1_sleck_components/src/App.js
+./solutions/1_sleck_components/src/components/**/*.js
+'''
+browser = ./solutions/1_sleck_components/build/index.html
+
+[slide]
+title=Unidirectional Data Flow - Between Components
+
+
+[slide]
+title=1D Data - Between Components
+markdown : '''
+![reddit](file://./images/unidirection1.jpg)
+'''
+
+[slide]
+title=DEMO
+editor=./demos/*.js
+
+[slide]
+title=ACTIVITY 2 - sleck state refactor
+editor :'''
+./activities/2_sleck_state_refactor/instructions.md
+./activities/2_sleck_state_refactor/src/App.js
+./activities/2_sleck_state_refactor/src/components/**/*.js
+'''
+browser = ./solutions/2_sleck_state_refactor/build/index.html
+
+
+[slide]
+title=SOLUTION 2 - sleck state refactor
+editor :'''
+./solutions/2_sleck_state_refactor/src/App.js
+./solutions/2_sleck_state_refactor/src/AppImproved.js
+./solutions/2_sleck_state_refactor/src/components/**/*.js
+'''
+browser = ./solutions/2_sleck_state_refactor/build/index.html
+
+
+
+[slide]
+title=React Calculator Challenge
+
+
+[slide]
+title=ACTIVITY 3 - calculator
+editor :'''
+./activities/3_calculator/src/App.js
+'''
+browser = ./solutions/3_calculator/build/index.html
+
+[slide]
+title=SOLUTION 3 - calculator
+editor :'''
+./solutions/3_calculator/src/App.js
+./solutions/3_calculator/src/components/**/*.js
+'''
+terminal=./solutions/3_calculator/
+
+
+
+[slide]
+title=And now let's close the loop...
+
+
+
+[slide]
+title=Full Stack Web Development
+markdown : '''
+![buttons](file://./images/iknowfullstack.jpg)
+'''
+
+
+
+[slide]
+title=Full Stack Web Development
+markdown : '''
+> ![buttons](file://./images/iknowfullstack.jpg)
+
+* In a real web application, a lot of the state will not "start" with the top
+  level component
+
+* Instead, it will only be in charge of fetching that state from a back-end
+  server
+
+### QUESTION
+
+* In our Sleck example, what should be stored in the backend?
+'''
+
+
+[slide]
+title=The events update the backend
+markdown : '''
+![reddit](file://./images/unidirection1.jpg)
+'''
+
+
+[slide]
+title=ACTIVITY 4 - sleck backend
+editor :'''
+./activities/4_sleck_backend/client/src/App.js
+./activities/4_sleck_backend/server.js
+'''
+terminal=./solutions/4_sleck_backend/
+
+[slide]
+title=SOLUTION 4 - sleck backend
+editor :'''
+./solutions/4_sleck_backend/client/src/App.js
+./solutions/4_sleck_backend/client/src/components/**/*.js
+./solutions/4_sleck_backend/server.js
+'''
+terminal=./solutions/4_sleck_backend/
+
+
+
+

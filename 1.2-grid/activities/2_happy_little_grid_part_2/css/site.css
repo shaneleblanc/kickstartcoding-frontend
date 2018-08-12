@@ -1,0 +1,101 @@
+/* Challenge 4 */
+
+/*
+    Take a look at the blog page. Now, style the blog
+    page so that each image is to the left of the
+    header, and the summary is below the header (also
+    to the right of the image), as such:
+     ____
+    |    | HEADER
+    |____| Summary text
+
+    Make the images 100x100px.
+*/
+.Article {
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 50% 50%;
+  grid-row-gap: 7.5px;
+  grid-column-gap: 7.5px;
+}
+.Article-image {
+  width: 100px;
+  height: 100px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.Article-title {
+  grid-column: 2;
+  grid-row: 1;
+}
+.Article-summary {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+    Challenge OMGWTFBBQ
+    Include the bonus.css file.
+*/
+
+
+
+
+
+
+/************ Solution to Part 1 below ****************/
+
+/*
+    We set up a grid like this:
+
+    | <--> | 200px |       600px     | <--> | ^
+    |      |       |                 |      | 100px
+    | ---- | ----- | --------------- | ---- | v
+    |      |       |                 |      | ^
+    |      |       |                 |      | auto
+    |      |       |                 |      | v
+*/
+
+/* Challenge 2 */
+.Container {
+    display: grid;
+    grid-template-columns: 1fr 200px 600px 1fr;
+    /*
+        Bonus Challenge:
+        Instead of using 600px below, we used minmax(auto, 600px) which will
+        make it "responsive". This special minmax is a CSS function that will
+        use a maximum of 600px OR a minimum the remaining space, whatever is
+        smallest.
+
+        grid-template-columns: 1fr 200px minmax(auto, 600px) 1fr;
+    */
+
+    grid-template-rows: 100px auto;
+
+    /* Space out all the rows and columns by 20px */
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+/* Challenge 3 */
+.Navigation {
+    grid-column: 3 / span 2;
+}
+
+.Sidebar {
+    grid-column: 2;
+}
+
+.MainContent {
+    grid-column: 3;
+}

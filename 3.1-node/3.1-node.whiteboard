@@ -1,0 +1,321 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 3.1
+
+[slide]
+title=Node Crash Course & Peak Into React
+
+[slide]
+title=Agenda for Today
+markdown : '''
+1. Node Crash Course
+2. NPM Crash Course
+3. First steps with React
+
+The goal with today's Node.js material is BREADTH, not DEPTH. When using React
+day-to-day, you won't necessarily be doing a lot of Node.js web development.
+However, React is closely related, since it's built using Node.js, and thus
+it's important to know at least broadly for context.
+
+*Note:* We will do a bit more of Node.js, later on!
+'''
+
+
+[slide]
+title=Node.js
+
+[slide]
+title=Node.js: Lets us run JS in the terminal
+
+
+[slide]
+title=Node.js
+markdown : '''
+> ![nodejs](file://./images/nodejs.png)
+
+### History
+
+* Spin-off of Chrome to run JavaScript in the terminal (no browser!), making it
+  as "real" of a programming language as Python, Ruby, etc
+* Like nearly all other programming languages and tools, it's free software
+* Originally developed and supported by Joyent -- a company in San Francisco
+  that was later acquired by Samsung
+* Community drama caused a split in 2015 (called a now defunct io.js), and was
+  only resolved when the Node.js Foundation was formed to manage Node.js, and
+  Joyent promised a more open governance model
+'''
+
+
+[slide]
+title=Node.js
+markdown : '''
+> ![nodejs](file://./images/nodejs.png)
+
+### Most popular uses
+* Creating servers and back-end APIs (just like Python, Ruby)
+* Building modern front-end
+
+### Less popular uses
+* Writing command-line applications
+* Writing desktop applications (Electron, what VSCode, Atom, Whiteboard use, is
+  based on node)
+'''
+
+
+[slide]
+title=Modern front-end dev
+markdown : '''
+![One does not simply](file://./images/one_does_not_simply.jpg)
+'''
+
+
+[slide]
+title=Node.js
+markdown : '''
+### Most popular uses
+* Creating servers and back-end APIs (just like Python, Ruby)
+* **Building modern front-end**
+    * Compiling JavaScript and its many variants into machine-generated
+      compressed and highly compatible versions of JS
+    * This is called the "build step"
+'''
+
+
+[slide]
+title=Modern front-end dev
+markdown : '''
+![Compiled JS](file://./images/compiled_js.png)
+'''
+
+
+[slide]
+title=Node.js
+markdown : '''
+> ![nodejs](file://./images/nodejs.png)
+
+### Key terms
+* **node.js** - a "JavaScript engine", how we run JavaScript in the terminal
+* **build step** - the step while launching a site to production where you transform the
+  front-end JS and CSS code into (also can apply to images, and more)
+'''
+
+[slide]
+title=DEMO: Node.js hello world
+editor = ./demos/helloworld.js
+terminal = ./demos/
+
+
+[slide]
+title=ACTIVITY 1: hello node world
+editor = ./activities/1_hello_node_world.txt
+
+
+[slide]
+title=SOLUTION 1: Node.js hello world
+editor   = ./solutions/1_helloworld.js
+terminal = ./solutions/
+
+
+[slide]
+title=ACTIVITY 2: node js practice
+editor = ./activities/2_node_js_pratice.js
+
+
+[slide]
+title=SOLUTION 2: node js practice
+editor   = ./solutions/2_node_js_practice.js
+terminal = ./solutions/
+
+
+[slide]
+title=It's Monday!
+markdown : '''
+![climbing](file://./images/mondays.gif)
+'''
+
+[slide]
+title=QUIZ
+
+[slide]
+title=NPM
+
+[slide]
+title=NPM
+markdown : '''
+### NPM
+
+* node-package manager, a "swiss army knife" of JavaScript, used for
+  downloading other people's JavaScript libraries, and managing JavaScript
+  projects
+
+* Downloading and installing JavaScript packages (like pip & pipenv for
+Python)
+
+* Launching JavaScript servers (like python manage.py for Python)
+
+* Publishing JavaScript packages for others to use
+'''
+
+
+[slide]
+title=npmjs.com
+browser = http://npmjs.com
+
+[slide]
+title=NPM
+markdown : '''
+### KEY TERMS
+* npm - node-package manager, a "swiss army knife" of JavaScript, used for
+  downloading other people's JavaScript libraries, and managing JavaScript
+  projects
+* npmjs.com - the website for NPM, the largest repo of software
+* `node_modules` - this is where downloaded Node packages go
+* package.json - this file says "I'm a JavaScript project!" and it contains
+  everything you need to know about the project at hand
+'''
+
+
+
+[slide]
+title=DEMO: Using NPM
+terminal=./demos/
+browser=http://npmjs.com
+
+
+[slide]
+title=ACTIVITY 3: npm installathon
+editor=./activities/3_npm_installathon.md
+
+
+[slide]
+title=SOLUTION 3
+editor : '''
+./solutions/3-npm-installathon/main.js
+./solutions/3-npm-installathon/package.json
+'''
+terminal=./solutions/3-install-marathon/
+
+
+
+[slide]
+title=React.js
+markdown : '''
+![react](file://./images/adhappening.gif)
+'''
+
+[slide]
+title=React.js
+markdown : '''
+### History
+* Originally developed by Facebook
+* Written in JSX (a JavaScript variant that allows templating HTML embedded
+  into JavaScript)
+* Transformed into machine-generated ultra-compressed code using a bunch of
+  Node.js tools
+* Took the front-end world by storm with a unique approach:
+    1. State (to be explored later)
+    2. Componentization (to be explored later)
+    3. Unidirectional data flow (to be explored later)
+    4. Virtual DOM (makes it go fast, to be briefly discussed later)
+
+![react](file://./images/react.png)
+'''
+
+[slide]
+title=React.js
+markdown :'''
+
+### KEY TERMS
+* **React** - the most trendy and popular front-end framework for JavaScript
+* Also good to know: **yarn** - hipster NPM, same thing as NPM but with
+  slightly different syntax (used to be faster, now close to the same)
+'''
+
+[slide]
+title=JSX, Babel, & Webpack
+
+[slide]
+title=JSX
+* A variant of JavaScript that lets us mix HTML in our JavaScript code, and
+  permits a sort of templating
+
+![jsx](file://./images/jsx.png)
+'''
+
+
+[slide]
+title=Babel
+markdown :'''
+* Tool written with Node that transforms modern JS and JSX into legacy JS
+'''
+
+[slide]
+title=Babel: Example
+browser = https://babeljs.io/repl/
+
+
+[slide]
+title=Webpack
+markdown :'''
+* Tool written with Node that "builds" our front-end code by combining many JS
+  files and many CSS files and even image files into one bundle that can be
+  loaded faster in the browser
+
+![what is webpack](file://./images/webpack.png)
+'''
+
+
+
+[slide]
+title=Webpack, Babel & React/JSX
+markdown : '''
+By their powers combined... we have modern front-end development!
+
+![three rings](file://./images/three_rings.jpg)
+'''
+
+[slide]
+title=Problem: That's * a lot * of packages to set up
+
+[slide]
+title=Problem: That's a lot
+editor=./demos/ejected_package.json
+
+[slide]
+title=Solution: create-react-app
+
+[slide]
+title=Webpack, Babel & JSX: Summary
+markdown :'''
+
+### KEY TERMS
+* **webpack** - a tool written with Node/NPM that lets us combine JS, CSS, and
+  PNG
+* **babel** - a "compiler" that takes modern JS or JSX and transforms it into
+  ugly old JS
+* **JSX** - a JavaScript variant that lets us embed and template HTML right
+  into our JS code
+* **create-react-app** - The easiest way to get started with React apps (gets
+  you going in a good spot, similar to cookiecutter)
+'''
+
+[slide]
+title=DEMO: create-react-app
+terminal=./demos/
+
+
+
+
+[slide]
+title=ACTIVITY 4: lotr
+editor=./activities/4_lotr/instructions.txt
+
+
+[slide]
+title=SOLUTIONS 4: lotr
+editor=./solutions/4_lotr/src/App.js
+terminal=./solutions/4_lotr/
+

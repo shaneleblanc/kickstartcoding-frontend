@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-earthly.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <h1>To-do List</h1>
+        <div id="todo-list">
+        </div>
+
+        <input placeholder="Enter item" id="todo-input" />
+        <button onCLick="addItem()">Add</button>
+
+        <script>
+            let todoItems = [
+                'Work on homework',
+                'Work on career milestones',
+                'Eat',
+                'Do more homework',
+                'Stay up late with more HW neglecting SO',
+            ];
+
+            render = () => {
+                // Challenge #1: Using document.querySelector, fetch the div
+                // with ID "todo-list" and then console log it.
+              list = document.querySelector('#todo-list');
+
+                // Challenge #2: Using document.createElement and appendChild,
+                // add a paragraph tag with the word "Todo List" (for now, just
+                // to test)
+
+                // Challenge #3: Loop through the todoItems, console.logging
+                // each one
+              list.innerHTML = "";
+
+              for (let todoItem of todoItems){
+                let newP = document.createElement('p');
+                let delLink = document.createElement('button');
+                let icon = document.createElement('i');
+                icon.classList.add('glyphicon');
+                icon.classList.add('glyphicon-remove')
+                delLink.appendChild(icon);
+                delLink.onclick = () => {
+                  delItem(todoItem);
+                };
+                newP.textContent = todoItem;
+                newP.appendChild(delLink);
+                list.appendChild(newP);
+
+              }
+                // Challenge #4: Combine #2 and #3 so that you are adding each
+                // of the items in the todoItems array as a new p tag.
+            }
+             delItem = item => {
+              console.log('delete item button gettin clickded')
+              index = todoItems.indexOf(item);
+              todoItems.splice(index, 1);
+              render();
+            }
+
+            addItem = () => {
+                console.log('add item button getting clicked');
+                var input = document.querySelector('#todo-input');
+                console.log('The input element:', input);
+                let value = input.value;
+                console.log('The value entered:', value);
+                todoItems.push(value);
+                render();
+
+                // Challenge #5: Fix this button so that when they click on it,
+                // it adds the value to the list.
+
+                // Challenge #6: Make it re-render the list after they add a
+                // new value.
+                // Hint #1: Very simple, only need to call the function.
+                // Hint #2: Look at code for "emptying" the HTML before rendering.
+            }
+
+
+            // Bonus Challenge: Add "X" button to each item in the list to
+            // clear it from the list.
+
+            render();
+
+        </script>
+    </body>
+</html>

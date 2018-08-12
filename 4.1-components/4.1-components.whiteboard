@@ -1,0 +1,234 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 4.1
+
+[slide]
+title=Components
+
+
+[slide]
+title=Recap
+markdown : '''
+* `.map`
+
+* `state`
+
+* `.setState`
+'''
+
+[slide]
+title=ACTIVITY 1 - quidditch manager
+editor : '''
+./activities/1_quidditch_manager/instructions.md
+'''
+
+[slide]
+title=SOLUTION 1 - quidditch manager
+editor : '''
+./solutions/1_quidditch_manager/src/App.js
+./solutions/1_quidditch_manager/src/AppImproved.js
+'''
+
+[slide]
+title=Questions
+markdown : '''
+* Is this code DRY?
+
+* Is everything being in one file maintainable in a larger team? (Merge
+  conflicts, anyone?)
+
+* Is this code re-usable?
+'''
+editor = ./solutions/1_quidditch_manager/src/App.js
+
+
+
+[slide]
+title=Principles of React
+markdown : '''
+1. State
+2. Componentization
+3. Unidirectional data flow
+4. Virtual DOM
+'''
+
+[slide]
+title=Principles of React
+markdown : '''
+1. State
+2. **Componentization**
+3. Unidirectional data flow
+4. Virtual DOM
+'''
+
+
+[slide]
+title=Componentization
+markdown : '''
+* Split up your React code into separate files
+
+* Each "Component" can be "re-usable"
+
+* DRY out a page by breaking down repetitive elements
+
+* Each "Component" can use other components, forming a *component tree*
+
+* *Very* good for larger projects and organizations -- components are very
+  self-contained, and each team or individual can work on different components
+  simultaneously -- no merge conflicts!
+
+* You've already been writing a component
+
+* **NOTE:** It's considered good practice for state to still mostly reside at
+  the top "App" level
+'''
+
+[slide]
+title=Componentization
+markdown : '''
+### KEY TERMS:
+* component - An important feature of react that lets us break down
+  complicated UIs into self-contained, re-usable components
+'''
+
+
+
+[slide]
+title=Componentization
+markdown : '''
+![buttons](file://./images/buttons.gif)
+'''
+
+[slide]
+title=Componentization
+markdown : '''
+![radio](file://./images/radio.gif)
+'''
+
+[slide]
+title=Componentization
+markdown : '''
+![reddit](file://./images/reddit.png)
+'''
+
+[slide]
+title=Componentization
+markdown : '''
+![reddit](file://./images/reddit_componentized.png)
+'''
+
+
+[slide]
+title=ACTIVITY 2 - component wireframing
+markdown : '''
+![github](file://./activities/2_component_wireframing/github.png)
+
+![Google Slides](file://./activities/2_component_wireframing/google_slides.jpg)
+
+![Slack](file://./activities/2_component_wireframing/slack.jpg)
+
+![Reddit](file://./activities/2_component_wireframing/reddit.jpg)
+
+![GMail](file://./activities/2_component_wireframing/gmail.png)
+'''
+
+[slide]
+title=SOLUTION 2 - component wireframing
+markdown : '''
+![github](file://./solutions/2_component_wireframing/github.png)
+
+![Google Slides](file://./solutions/2_component_wireframing/google_slides.png)
+
+![Slack](file://./solutions/2_component_wireframing/slack.png)
+
+![Reddit](file://./solutions/2_component_wireframing/reddit.png)
+'''
+
+[slide]
+title=Monday, funday!
+
+[slide]
+title=Quiz
+
+[slide]
+title=ACTIVITY 3 - component farm
+editor=./activities/3_component_farm/instructions.md
+
+
+[slide]
+title=SOLUTION 3 - component farm
+editor : '''
+./solutions/3_component_farm/src/App.js
+./solutions/3_component_farm/src/components/**/*.js
+'''
+
+
+
+[slide]
+title=Re-Usable Components
+markdown : '''
+* While some components will always display the same thing every time, most
+  component should be in some way re-usable
+
+![reuse](file://./images/componentreuse.gif)
+'''
+
+
+[slide]
+title=Re-Usable Components
+markdown : '''
+
+### KEY TERMS
+* props - shortened version of "properties", allows components to behave
+  differently in different circumstances, and be re-usable templates for
+  different data
+
+* `this.props` - how to access props
+
+* `this.props.children` - how to access "children" (contents) of the component
+'''
+
+
+[slide]
+title=ACTIVITY 4 - component props
+editor=./activities/4_component_props/instructions.md
+
+
+[slide]
+title=SOLUTION 4 - component props
+editor :'''
+./solutions/4_component_props/src/App.js
+./solutions/4_component_props/src/components/**/*.js
+'''
+
+
+[slide]
+title=Componentization
+markdown : '''
+* A very important skill to have is the ability to refactor existing code to
+  break it down into components
+
+* This is not only a good interview skill to talk about, but also something you
+  will do on a day-to-day basis
+'''
+
+[slide]
+title=ACTIVITY 5 - quidditch components
+editor=./activities/5_quidditch_components/instructions.md
+
+
+[slide]
+title=SOLUTION 5 - quidditch components
+editor :'''
+./solutions/5_quidditch_components/src/App.js
+./solutions/5_quidditch_components/src/components/**/*.js
+'''
+
+
+
+[slide]
+title=Questions?
+

@@ -1,0 +1,145 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 5.1
+
+[slide]
+title=NPM & React Router
+
+
+[slide]
+title=React Review
+editor=./demos/three_types_of_components.js
+
+
+
+[slide]
+title=Everyone remember NPM?
+
+
+[slide]
+title=React + NPM
+markdown : '''
+* One of the most beautiful things about react is we can use packages from NPM
+
+* Another beautiful thing is we can PUBLISH packages using NPM (HW due next
+  week!)
+'''
+
+
+[slide]
+title=NPM
+browser=https://www.npmjs.com/
+
+
+[slide]
+title=ACTIVITY 1 - npm components
+editor=./activities/1_npmcomponents/instructions.md
+browser=./solutions/1_npmcomponents/build/index.html
+
+
+[slide]
+title=SOLUTION 1 - npm components
+browser=./solutions/1_npmcomponents/build/index.html
+editor=./solutions/1_npmcomponents/src/App.js
+
+[slide]
+title=Conditional rendering
+
+[slide]
+title=Conditional Rendering
+editor=./demos/conditional_rendering.js
+
+
+[slide]
+title=ACTIVITY 2 - blog
+editor=./activities/2_blog/instructions.md
+browser=./solutions/2_blog/build/index.html
+
+
+[slide]
+title=SOLUTION 2 - blog
+editor=./activities/2_blog/instructions.md
+
+[slide]
+title=PROBLEMS
+markdown : '''
+* Can I link directly to pages?
+
+* Is this DRY?
+
+* "My browser's back and forward buttons don't work!"
+
+* What happens when you refresh?
+'''
+
+[slide]
+title=React Router
+
+[slide]
+title=React Router
+editor : '''
+./activities/3_blog_router/src/App.js
+./activities/3_blog_router/src/index.js
+'''
+
+
+[slide]
+title=ACTIVITY 3: blog router
+editor : '''
+./activities/3_blog_router/instructions.md
+./activities/3_blog_router/src/App.js
+./activities/3_blog_router/src/components/**/*.js
+'''
+
+
+[slide]
+title=SOLUTION 3: blog router
+editor : '''
+./solutions/3_blog_router/instructions.md
+./solutions/3_blog_router/src/App.js
+./solutions/3_blog_router/src/components/**/*.js
+'''
+
+
+[slide]
+title=CRUD & APIs
+markdown : '''
+* Create
+* Read
+* Update
+* Delete
+'''
+
+
+[slide]
+title=CRUD & APIs
+markdown : '''
+* Create - POST
+* Read - GET
+* Update - PUT (or POST)
+* Delete - DELETE (or POST)
+'''
+
+
+
+
+[slide]
+title=ACTIVITY 4: blog crud
+editor : '''
+./activities/4_blog_crud/instructions.md
+./activities/4_blog_crud/client/src/App.js
+./activities/4_blog_crud/client/src/components/**/*.js
+'''
+
+
+[slide]
+title=SOLUTION 4: blog crud
+editor : '''
+./solutions/4_blog_crud/instructions.md
+./solutions/4_blog_crud/client/src/App.js
+./solutions/4_blog_crud/client/src/components/**/*.js
+'''
+

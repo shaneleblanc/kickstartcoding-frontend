@@ -1,0 +1,17 @@
+Your challenge is to build a book searching application, from scratch.
+Think about how to break it down into different components.
+
+See the working application here:
+http://vast-retreat-72383.herokuapp.com/
+
+General tips:
+
+* Start with a previous activity
+
+* Play around with the Open Library API.  Hint:
+  http://openlibrary.org/search.json?q=lord+of+the+rings&limit=10&offset=0
+
+* Research their cover API. Hint:
+  http://covers.openlibrary.org/b/id/8069767-M.jpg -- the number can be
+  replaced by an ID from the object you get back from their API.
+

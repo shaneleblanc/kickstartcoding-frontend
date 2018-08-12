@@ -1,0 +1,272 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 5.2
+
+[slide]
+title=Redux
+
+
+[slide]
+title=Recap - Full Stack API
+markdown : '''
+* What is a web API?
+
+* Why do we need web APIs?
+
+* How does react interact with web APIs?
+
+* How do we create React apps that appear to have multiple pages?
+'''
+
+[slide]
+title=Recap - Full Stack API
+markdown : '''
+* What is a web API? - **A collection of routes on a web / HTTP server that
+  listen for requests to come in and send back data that was requested.**
+  (Sometimes called REST API)
+
+* Why do we need web APIs? - **They allow the front-end of Single Page Apps to
+  store and retrieve data from  the database.**
+
+* How does react interact with web APIs? - **Using fetch, followed by
+  setState**
+
+* How do we create React apps that appear to have multiple pages? - **Using
+  React Router**
+'''
+
+[slide]
+title=Recap - React Router
+markdown : '''
+* What is a `<Route>` component good for? - **Specifying a path that should
+  load up a certain component.** Essentially, a glorified "if-statement"
+
+* What is a `<Link>` component good for? - **Creating "fake links" to other
+  paths within your SPA**
+
+* What is the purpose of a React Router URL parameter? - **Add custom data to a
+  URL, such as slug or ID, that differs depending on the item you are
+  visiting**
+
+* How do you specify one? - **In a Route path, use a colon, e.g. `/:id/`**
+'''
+
+[slide]
+title=ACTIVITY 1 - brello
+editor : '''
+./activities/1_brello/instructions.md
+./activities/1_brello/client/src/App.js
+./activities/1_brello/client/src/components/**/*.js
+'''
+browser=./activities/1_brello/client/build/index.html
+
+
+[slide]
+title=SOLUTION 1 - brello
+editor : '''
+./solutions/1_brello/client/src/App.js
+./solutions/1_brello/client/src/components/**/*.js
+'''
+
+[slide]
+title=Interlude: The Async Problem
+
+
+[slide]
+title=Interlude: The Async Problem
+markdown : '''
+The Problem: Async stuff is hard
+
+The Solution: ...
+'''
+
+[slide]
+title=Interlude: The Async Problem
+markdown : '''
+The Problem: Async stuff is hard
+
+The Solution: None, it's just hard
+'''
+
+
+[slide]
+title=Interlude: The Async Problem
+markdown : '''
+
+The Problem: Async stuff is hard
+
+The Solution: Getting more used to it
+
+
+### KEY TERMS
+* **asynchronous** - the fact that with JavaScript, anything that requires IO
+  will take time to execute and gets "put off" until later
+
+* **callback** - what we call a function that has been designated to run later
+  once an asynchronous
+'''
+
+
+[slide]
+title=DEMO: The Async Problem
+editor : '''
+./demos/async_problem.js
+'''
+terminal=./demos/
+
+
+[slide]
+title=ACTIVITY 2: Async Challenge
+editor : '''
+./activities/2_async_challenge.js
+'''
+terminal=./demos/
+
+
+
+
+[slide]
+title=SOLUTION 2: Async Challenge
+editor : '''
+./solutions/2_async_challenge.js
+'''
+terminal=./demos/
+
+
+
+[slide]
+title=DEMO: Writing Callbacks
+editor : '''
+./demos/writing_callbacks.js
+'''
+terminal=./demos/
+
+
+
+[slide]
+title=ACTIVITY 3: callbacks
+editor : '''
+./activities/3_callbacks.js
+'''
+terminal=./demos/
+
+
+
+[slide]
+title=SOLUTION 3: callbacks
+editor : '''
+./solutions/3_callbacks.js
+'''
+terminal=./demos/
+
+
+[slide]
+title=Redux
+
+
+[slide]
+title=Redux - It's Complicated (TM)
+
+[slide]
+title=Redux - It's Complicated (TM)
+markdown : '''
+![redux cheatsheet](file://./images/redux_cheatsheet.png)
+'''
+
+[slide]
+title=Redux - It's Complicated (TM)
+browser = https://www.npmjs.com/package/redux
+
+[slide]
+title=Redux - It's Complicated (TM)
+browser = https://redux.js.org/
+
+[slide]
+title=Redux - The Good Parts
+markdown : '''
+![redux](http://camo.githubusercontent.com/5aba89b6daab934631adffc1f301d17bb273268b/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343535322f415243482d5265647578322d7265616c2e676966)
+'''
+
+[slide]
+title=Redux - The Good Parts
+markdown : '''
+> ![redux](file://./images/redux.png)
+
+### Key terms
+
+* **Redux**     Paradigm & framework for state-management, and for React,
+  useful for large projects where application state becomes too complicated to
+  manage on a single component. Think "MVC" but for managing state in React.
+
+* **Store** -  The Redux state, often used most for data fetched from back-end
+
+* **Action** -  Represents an "event" that occurs, e.g. an action is
+  *dispatched* when data is `fetch`ed from the back-end, and another when the
+  response comes back
+
+* **Reducer** -  Triggered when an action is dispatched, a reducer modifies (a
+  duplicate of) the state based on the action that happened
+
+* **Store state slice** -  Redux is partitioned into slices that handle
+  different aspects of large applications (analogy: *Django apps*)
+'''
+
+
+
+[slide]
+title=Redux & You
+
+
+
+[slide]
+title=Redux Speed Tour - Counter
+editor : '''
+./demos/redux_examples/counter/**/*.js
+'''
+terminal = ./demos/redux_examples/counter/
+
+[slide]
+title=Redux Speed Tour - To-Do
+editor : '''
+./demos/redux_examples/todos/**/*.js
+'''
+terminal = ./demos/redux_examples/todos/
+
+
+[slide]
+title=Redux Speed Tour - Async
+editor : '''
+./demos/redux_examples/async/**/*.js
+'''
+terminal = ./demos/redux_examples/async/
+
+
+[slide]
+title=ACTIVITY 4 - brello redux
+editor : '''
+./activities/4_brello_redux/instructions.md
+./activities/4_brello_redux/client/src/actions/*.js
+./activities/4_brello_redux/client/src/reducers/*.js
+./activities/4_brello_redux/client/src/constants/*.js
+./activities/4_brello_redux/client/src/App.js
+./activities/4_brello_redux/client/src/components/**/*.js
+'''
+browser=./activities/1_brello/client/build/index.html
+
+
+[slide]
+title=SOLUTION 4 - brello redux
+editor : '''
+./solutions/4_brello_redux/client/src/actions/*.js
+./solutions/4_brello_redux/client/src/reducers/*.js
+./solutions/4_brello_redux/client/src/constants/*.js
+./solutions/4_brello_redux/client/src/App.js
+./solutions/4_brello_redux/client/src/components/**/*.js
+'''
+
+
+[slide]
+title=Questions?

@@ -1,0 +1,105 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Frontend - 4.3
+
+[slide]
+title=Stateless Components
+
+[slide]
+title=ACTIVITY 1 - component library
+editor=./activities/1_component_library/instructions.md
+browser=./solutions/1_component_library/build/index.html
+
+[slide]
+title=SOLUTION 1 - component library
+editor=./solutions/1_component_library/src/App.js
+
+[slide]
+title=Functional Components
+
+[slide]
+title=Functional Components
+markdown : '''
+
+Instead of using `class`, we can also write a component as a function.
+
+This is a separate syntax that accomplishes the exact same thing, but with one
+exception: Functional components cannot have state.
+
+Depending on where you work, one or the other might be preferred or enforced in
+certain circumstances.
+
+### KEY TERM
+
+* functional components - another syntax for writing components, only
+  useful for compononets which have no state, aka "dumb components"
+'''
+
+
+
+[slide]
+title=Alternative Component Syntaxes
+markdown : '''
+
+### KEY TERM
+
+* functional components - another syntax for writing components, only useful
+  for compononets which have no state, aka "dumb components"
+'''
+editor = demos/altcomponentsyntaxes.js
+
+
+[slide]
+title=ACTIVITY 2 - componentathon
+editor=./activities/2_componentathon/instructions.md
+browser=./solutions/2_componentathon/build/index.html
+
+[slide]
+title=SOLUTION 2 - componentathon
+editor=./solutions/2_componentathon/src/App.js
+
+
+[slide]
+title=React Full Stack
+
+
+[slide]
+title=React Full Stack
+markdown : '''
+* In the real world, React is used as a "Client" that interacts with a back-end
+
+* We use the same concepts we've used before:
+    * `.fetch` to send `POST` and `GET` requests to the server
+    * And the server sends JSON back as the response
+    * When we get the response, we do a `.setState` with the data we want, in
+      order to render the new data
+'''
+
+[slide]
+title=Python + React Challenge
+markdown : '''
+* In this challenge exercise, a server is already written for you in Python
+
+* Run this server, and figure out how to enhance the front-end so it displays
+  all the movies and allows you to search for movies
+
+* Note: You'll have to run 2 servers at once: React, and Python
+'''
+
+
+[slide]
+title=ACTIVITY 3 - full stack
+editor=./activities/3_fullstack/instructions.md
+
+[slide]
+title=SOLUTION 3 - full stack
+editor=./solutions/3_fullstack/client/src/App.js
+
+
+[slide]
+title=ACTIVITY 4 - Book Search Challenge
+browser=http://vast-retreat-72383.herokuapp.com/
+

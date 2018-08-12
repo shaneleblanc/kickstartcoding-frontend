@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura-earthly.css" />
+    </head>
+    <body>
+        <h1>To-do List</h1>
+        <div id="todo-list">
+        </div>
+
+        <input placeholder="Enter item" id="todo-input" />
+        <button onCLick="addItem()">Add</button>
+
+        <script>
+            let todoItems = [
+                'Work on homework',
+                'Work on career milestones',
+                'Eat',
+                'Do more homework',
+                'Stay up late with more HW neglecting SO',
+            ];
+
+            function render() {
+                // Challenge #1
+                let div = document.querySelector('#todo-list');
+
+                div.innerHTML = ''; // (Challenge #6)
+
+                // Challenge #2
+                // let p = document.createElement('p');
+                // p.textContent = "Todo List";
+                // div.appendChild(p);
+
+                // Loop through the todoItems, so that you are adding each of
+                // the items in the todoItems array as a new p tag.
+                for (let item of todoItems) {
+                    let p = document.createElement('p');
+                    p.textContent = item;
+
+                    div.appendChild(p);
+
+                    // Bonus challenge:
+                    let deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'X';
+                    deleteButton.onclick = () => {
+                        // Sadly there is no "remove" method on JavaScript
+                        // arrays (can only remove by index), which means more
+                        // complex code is necessary to remove an element
+                        let index = todoItems.indexOf(item);
+                        todoItems.splice(index, 1);
+
+                        render(); // rerender based on array
+                    };
+                    p.insertBefore(deleteButton, p.firstChild);
+                }
+            }
+
+            function addItem() {
+                console.log('add item button getting clicked');
+                var input = document.querySelector('#todo-input');
+                console.log('The input element:', input);
+                let value = input.value;
+                console.log('The value entered:', value);
+
+                todoItems.push(value); // Challenge #5
+
+                render(); // Challenge #6
+                input.value = ''; // Clear the input every time
+            }
+
+            render();
+        </script>
+    </body>
+</html>
+
+

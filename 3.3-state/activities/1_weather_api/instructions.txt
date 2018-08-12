@@ -1,0 +1,75 @@
+Weather Dashboard
+
+Getting started: As before, copy the node_modules directory from a
+previous activity into this directory, and then get started by running:
+
+    npm run start
+
+----------------------
+Challenge #1: console.log & trying static data
+
+1. Adding console.log is always a good idea. Add one to the onRefresh
+method.
+
+2. Now, try un-commenting the state variable. This will set the state to
+the static, "hard-coded" Oakland example given. Can you explain where
+each bit of data is going?
+
+----------------------
+Challenge #2: Implementing fetch to Open Weather Map API
+
+Using previous activities and cheat-sheets as a guide, add in a fetch to
+the onSubmit method. The URL, and API Key you can use is provided as
+hint.
+
+1. For now, just hard-code the location, for example to Oakland.
+
+2. Also for now, just console.log the result.
+
+
+----------------------
+Challenge #3: Add setState after fetch
+
+For successful fetches, we now want to do a setState to set the results
+in the state and re-render the application. This is trickier than just
+adding a single line. Instead the data has to be slightly transformed
+before it is usable.  If you do it correctly, it should cause the page,
+when clicking the "refresh" button, to show the current weather.
+
+Hint: The "oaklandweather.json" file is the same as what you get from
+the API. Notice how it is transformed in the default state that you
+uncommented-out in Challenge #1. Your task now is to transform the data
+in the same way for your setState.
+
+
+----------------------
+Challenge #4: Search box
+
+Add the ability to search for different locations.
+
+1. Uncommenting-out the search box at the bottom of the page, and adding
+in the code necessary (an onChange event, etc) to be able to type in new
+locations.
+
+2. Instead of using a hard-coded location, add to search for different
+locations.
+
+
+----------------------
+Challenge #5: Handle 404s
+
+Experiment with the data. Write the code to gracefully handle 404
+errors, such as when the user enters a non-existent location.
+
+
+----------------------
+Code Comprehension Challenge:
+
+1. Can you explain what the code at the top of the render() method is
+doing with classes? This, incidentally, is a pattern you will see in
+industry.
+
+2. It's annoying to have to hit refresh. Why can't we put the fetch in
+the render method?
+
+
